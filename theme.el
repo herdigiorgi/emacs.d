@@ -1,0 +1,8 @@
+(load-theme 'monokai t)
+(setq visible-bell 1)
+(global-hl-line-mode)
+(set-face-attribute 'default nil :height 110)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(toggle-scroll-bar nil)
+(setq ring-bell-function 'ignore)

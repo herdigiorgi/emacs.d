@@ -1,0 +1,10 @@
+*
+
+!.gitignore
+!.projectile
+!global-keys.el
+!hs-conf.el
+!init.el
+!lisp.el
+!packages.el
+!theme.el
