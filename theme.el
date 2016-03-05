@@ -1,4 +1,4 @@
-(load-theme 'monokai t)
+(load-theme 'zenburn t)
 (setq visible-bell 1)
 (global-hl-line-mode)
 (set-face-attribute 'default nil :height 110)

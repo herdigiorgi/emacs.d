@@ -6,7 +6,6 @@
   (show-paren-mode t)
   (projectile-mode 1)
   (hs-minor-mode 1)
-  (hs-hide-all)
   (eldoc-mode t)
   (auto-complete-mode t))
 

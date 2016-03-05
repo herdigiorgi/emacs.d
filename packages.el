@@ -10,6 +10,7 @@
 	auto-complete
 	ac-slime
 	column-marker
+	zenburn-theme
 	molokai-theme
 	monokai-theme
 	projectile
