@@ -13,4 +13,3 @@
 
 (load.d "lisp")
 (load.d "hs-conf")
-(load.d "scala")

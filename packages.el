@@ -19,8 +19,7 @@
 	hideshow
 	rainbow-delimiters
 	multiple-cursors
-	indent-guide
-	ensime))
+	indent-guide))
 
 (defun pkg:load-packages ()
   (package-initialize)
