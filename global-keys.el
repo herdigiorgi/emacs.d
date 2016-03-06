@@ -41,3 +41,5 @@
 
 (recentf-mode)
 (global-set-key [f2]  'recentf-open-files)
+
+(global-set-key (kbd "C-c l") 'global-linum-mode)

@@ -10,8 +10,7 @@
 	auto-complete
 	ac-slime
 	column-marker
-	zenburn-theme
-	molokai-theme
+	solarized-theme
 	monokai-theme
 	projectile
 	helm
@@ -20,7 +19,8 @@
 	hideshow
 	rainbow-delimiters
 	multiple-cursors
-	indent-guide))
+	indent-guide
+	ensime))
 
 (defun pkg:load-packages ()
   (package-initialize)
