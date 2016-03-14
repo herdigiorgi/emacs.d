@@ -42,4 +42,7 @@
 (recentf-mode)
 (global-set-key [f2]  'recentf-open-files)
 
-(global-set-key (kbd "C-c l") 'global-linum-mode)
+
+(global-set-key (kbd "<C-f1>") 'visual-line-mode)
+(global-set-key (kbd "<C-f2>") 'linum-mode)
+(global-set-key (kbd "C-c M-l") 'slime)

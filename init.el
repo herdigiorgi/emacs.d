@@ -12,4 +12,5 @@
 (load.d "auto-complete-conf")
 
 (load.d "lisp")
+(load.d "clojure-conf")
 (load.d "hs-conf")

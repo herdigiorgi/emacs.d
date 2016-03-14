@@ -9,9 +9,13 @@
 	magit
 	auto-complete
 	ac-slime
+	ac-helm
 	column-marker
+
 	solarized-theme
 	monokai-theme
+	soothe-theme
+	
 	projectile
 	helm
 	helm-projectile
@@ -19,7 +23,9 @@
 	hideshow
 	rainbow-delimiters
 	multiple-cursors
-	indent-guide))
+	indent-guide
+	groovy-mode
+	scala-mode2))
 
 (defun pkg:load-packages ()
   (package-initialize)

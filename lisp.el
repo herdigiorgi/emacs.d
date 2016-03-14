@@ -19,6 +19,7 @@
 
 (add-hook 'emacs-lisp-mode-hook 'lisp:edit-modes)
 (define-key emacs-lisp-mode-map (kbd "C-c TAB") 'auto-complete)
+(define-key emacs-lisp-mode-map (kbd "C-c SPC") 'ac-complete-with-helm)
 
 ;; COMMON LISP -----------------
 (defcustom inferior-lisp-program "sbcl"
@@ -61,6 +62,7 @@
 (cl:key "C-c M-p"     #'slime-repl-set-package)
 (cl:key "M-."         #'slime-edit-definition)
 (cl:key "C-c TAB"     #'auto-complete)
+(cl:key "C-c SPC"     #'ac-complete-with-helm)
 
 (defun common-lisp-repl ()
   (interactive)
