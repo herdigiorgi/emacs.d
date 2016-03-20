@@ -1,4 +1,4 @@
-(load-theme 'green-phosphor t) 
+(load-theme 'solarized-dark t) 
 (setq visible-bell 1)
 ;(global-hl-line-mode)
 (set-face-attribute 'default nil :height 110)
@@ -16,6 +16,5 @@
 ;(remove-all-bars)
 
 (require 'zone)
-(zone-when-idle 30)
-(setq zone-programs '(zone-pgm-jitter))
-
+(zone-when-idle 120)
+(setq zone-programs '(zone-pgm-putz-with-case))

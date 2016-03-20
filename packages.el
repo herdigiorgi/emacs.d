@@ -26,6 +26,10 @@
 	multiple-cursors
 	indent-guide
 
+	highlight-parentheses
+	hl-sexp
+	rainbow-blocks
+	
 	cider))
 
 (defun pkg:load-packages ()
