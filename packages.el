@@ -14,7 +14,8 @@
 
 	solarized-theme
 	monokai-theme
-	soothe-theme
+	calmer-forest-theme
+	green-phosphor-theme
 	
 	projectile
 	helm
@@ -24,8 +25,8 @@
 	rainbow-delimiters
 	multiple-cursors
 	indent-guide
-	groovy-mode
-	scala-mode2))
+
+	cider))
 
 (defun pkg:load-packages ()
   (package-initialize)

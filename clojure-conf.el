@@ -30,8 +30,7 @@
 		 (define-key clojure-mode-map keymap func)
 		 (define-key cider-repl-mode-map keymap func)
 		 (define-key cider-mode-map keymap func))))
-    (d "C-c d"     'ac-cider-popoup-doc)
-    (d "C-c C-d d" 'cider-doc)
+    (d "C-c d"     'cider-doc)
     (d "C-c C-c"   'cider-eval-defun-at-point)
     (d "C-c s r"   'cider-restart)
     (d "C-c t"     'cider-run-tests)
@@ -46,7 +45,11 @@
   (company-mode t)
   (clojure:config-shortcuts))
 
+(defun clojure:repl-hook ()
+  (company-mode t)
+  (projectile-mode t))
+
 (add-hook 'clojure-mode-hook 'clojure:hook)
-(add-hook 'cider-repl-mode-hook 'company-mode)
+(add-hook 'cider-repl-mode-hook 'clojure:repl-hook)
 
 (setq cider-repl-clear-help-banner nil)

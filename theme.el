@@ -1,6 +1,6 @@
-(load-theme 'monokai t) 
+(load-theme 'green-phosphor t) 
 (setq visible-bell 1)
-(global-hl-line-mode)
+;(global-hl-line-mode)
 (set-face-attribute 'default nil :height 110)
 (setq ring-bell-function 'ignore)
 
@@ -15,4 +15,7 @@
 ;(add-hook 'after-make-frame-functions 'remove-all-bars-after-make-frame)
 ;(remove-all-bars)
 
+(require 'zone)
+(zone-when-idle 30)
+(setq zone-programs '(zone-pgm-jitter))
 
