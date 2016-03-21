@@ -33,7 +33,7 @@
     (d "C-c t"     'cider-run-tests)
     (d "C-c TAB"   'helm-company)
     (d "C-c r"     'clojure:namespace-refresh)
-    (d "C-c M-j"   'clojure-jack-in)
+    (d "C-c M-j"   'cider-jack-in)
     (d "C-c M-x"   'clojure:connect-repl)))
 
 (defun clojure:hook ()
