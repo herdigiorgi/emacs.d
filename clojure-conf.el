@@ -20,9 +20,6 @@
   (interactive)
   (cider-connect "localhost" 4005))
 
-(defun clojure:mvn-repl ()
-  (interactive)
-  (cider-connect "localhost"))
 
 (defun clojure:config-shortcuts ()
   (cl-flet ((d (key func)
@@ -36,7 +33,8 @@
     (d "C-c t"     'cider-run-tests)
     (d "C-c TAB"   'helm-company)
     (d "C-c r"     'clojure:namespace-refresh)
-    (d "C-c M-j"   'clojure:connect-repl)))
+    (d "C-c M-j"   'clojure-jack-in)
+    (d "C-c M-x"   'clojure:connect-repl)))
 
 (defun clojure:hook ()
   (cider-mode)
