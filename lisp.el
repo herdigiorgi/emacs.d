@@ -2,7 +2,6 @@
 ;; LISP ---------------------
 (defun lisp:shared-modes ()
   (paredit-mode t)
-  (rainbow-delimiters-mode t)
   (show-paren-mode t)
   (projectile-mode 1)
   (hs-minor-mode 1)

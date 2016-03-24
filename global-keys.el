@@ -20,6 +20,8 @@
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
+(global-set-key (kbd "C-c <C-right>") 'other-frame)
+(global-set-key (kbd "C-c <C-left>")  'other-frame)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 
 (global-set-key (kbd "C-c h t")   #'hs-toogle-hiding)
@@ -46,3 +48,6 @@
 (global-set-key (kbd "<C-f1>") 'visual-line-mode)
 (global-set-key (kbd "<C-f2>") 'linum-mode)
 (global-set-key (kbd "C-c M-l") 'slime)
+
+(global-set-key (kbd "C-c p p") #'helm-projectile-switch-project)
+(global-set-key (kbd "C-c p f") #'helm-projectile-find-file)

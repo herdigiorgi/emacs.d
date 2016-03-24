@@ -4,7 +4,9 @@
   (cider-interactive-eval
    "(ns user)
     (require 'clojure.tools.namespace.repl)
-    (clojure.tools.namespace.repl/set-refresh-dirs \"src/main/clojure\" \"src\" )
+    (clojure.tools.namespace.repl/set-refresh-dirs 
+      \"src/main/clojure\" \"src\"
+      \"src/test/clojure\" \"test\")
     (when (resolve 'user/stop-app)
       (print :stop-app (eval '(user/stop-app))))
     (let [refresh-result (clojure.tools.namespace.repl/refresh)]
@@ -16,10 +18,14 @@
       (print refresh-result)
       refresh-result)"))
 
+(defun clojure:run-tests ()
+  (interactive)
+  (save-some-buffers)
+  (cider-test-run-project-tests))
+
 (defun clojure:connect-repl ()
   (interactive)
   (cider-connect "localhost" 4005))
-
 
 (defun clojure:config-shortcuts ()
   (cl-flet ((d (key func)
@@ -30,7 +36,7 @@
     (d "C-c d"     'cider-doc)
     (d "C-c C-c"   'cider-eval-defun-at-point)
     (d "C-c s r"   'cider-restart)
-    (d "C-c t"     'cider-run-tests)
+    (d "C-c t"     'clojure:run-tests)
     (d "C-c TAB"   'helm-company)
     (d "C-c r"     'clojure:namespace-refresh)
     (d "C-c M-j"   'cider-jack-in)
