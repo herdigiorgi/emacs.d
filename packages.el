@@ -10,7 +10,7 @@
 	auto-complete
 	ac-slime
 	ac-helm
-	column-marker
+	fill-column-indicator
 
 	solarized-theme
 	monokai-theme

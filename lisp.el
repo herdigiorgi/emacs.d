@@ -11,11 +11,11 @@
 (defun lisp:edit-modes ()
   (prettify-symbols-mode 1)
   (lisp:shared-modes)
-  (column-marker-1 80)
   (indent-guide-mode t)
   (highlight-parentheses-mode 1)
   (rainbow-blocks-mode 1)
-  (hl-sexp-mode 1))
+  (hl-sexp-mode 1)
+  (fci-mode 1))
 
 ;; Emacs
 
