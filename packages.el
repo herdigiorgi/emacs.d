@@ -8,6 +8,8 @@
       '(slime
 	magit
 	auto-complete
+	company
+	helm-company
 	ac-slime
 	ac-helm
 	fill-column-indicator

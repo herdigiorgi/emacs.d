@@ -1,4 +1,4 @@
-(load-theme 'solarized-dark t) 
+(load-theme 'solarized-light t) 
 (setq visible-bell 1)
 ;(global-hl-line-mode)
 (set-face-attribute 'default nil :height 110)

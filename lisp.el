@@ -2,7 +2,7 @@
 ;; LISP ---------------------
 (defun lisp:shared-modes ()
   (paredit-mode t)
-  (show-paren-mode t)
+  (show-paren-mode 1)
   (projectile-mode 1)
   (hs-minor-mode 1)
   (eldoc-mode t)
@@ -14,7 +14,7 @@
   (indent-guide-mode t)
   (highlight-parentheses-mode 1)
   (rainbow-blocks-mode 1)
-  (hl-sexp-mode 1)
+  ;(hl-sexp-mode 1)
   (fci-mode 1))
 
 ;; Emacs
