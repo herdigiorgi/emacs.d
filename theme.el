@@ -10,6 +10,10 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
+(nyan-mode 1)
+(nyan-start-animation)
+(setq nyan-bar-length 10)
+
 ;(defun remove-all-bars-after-make-frame (f) (remove-all-bars))
 ;(add-hook 'server-visit-hook 'remove-all-bars)
 ;(add-hook 'after-make-frame-functions 'remove-all-bars-after-make-frame)

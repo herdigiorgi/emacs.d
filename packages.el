@@ -18,6 +18,7 @@
 	monokai-theme
 	calmer-forest-theme
 	birds-of-paradise-plus-theme
+	nyan-mode
 	
 	projectile
 	helm
@@ -25,6 +26,7 @@
 	paredit
 	hideshow
 	rainbow-delimiters
+	rainbow-identifiers
 	multiple-cursors
 	indent-guide
 
