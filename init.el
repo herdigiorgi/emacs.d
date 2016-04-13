@@ -22,3 +22,4 @@
 (load.d "clojure-conf")
 (load.d "hs-conf")
 (load.d "fsharp-conf")
+(load.d "web-conf")

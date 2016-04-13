@@ -17,7 +17,7 @@
 	solarized-theme
 	monokai-theme
 	calmer-forest-theme
-	green-phosphor-theme
+	birds-of-paradise-plus-theme
 	
 	projectile
 	helm
@@ -33,7 +33,8 @@
 	rainbow-blocks
 
 	fsharp-mode
-	cider))
+	cider
+	web-mode))
 
 (defun pkg:load-packages ()
   (package-initialize)

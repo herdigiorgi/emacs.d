@@ -1,4 +1,4 @@
-(load-theme 'solarized-dark t) 
+(load-theme 'birds-of-paradise-plus t) 
 (setq visible-bell 1)
 ;(global-hl-line-mode)
 (set-face-attribute 'default nil :height 124)

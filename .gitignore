@@ -12,3 +12,4 @@
 !auto-complete-conf.el
 !clojure-conf.el
 !fsharp-conf.el
+!web-conf.el
