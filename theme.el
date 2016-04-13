@@ -1,7 +1,7 @@
 (load-theme 'solarized-dark t) 
 (setq visible-bell 1)
 ;(global-hl-line-mode)
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 124)
 (setq ring-bell-function 'ignore)
 
 ; Remove any bars... only text

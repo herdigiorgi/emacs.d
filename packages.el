@@ -31,7 +31,8 @@
 	highlight-parentheses
 	hl-sexp
 	rainbow-blocks
-	
+
+	fsharp-mode
 	cider))
 
 (defun pkg:load-packages ()
