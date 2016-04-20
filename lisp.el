@@ -16,13 +16,15 @@
   (rainbow-delimiters-mode 1)
   (rainbow-identifiers-mode 1)
   (hl-sexp-mode 1)
-  (fci-mode 1))
+  (highlight-80+-mode t))
 
 ;; Emacs
-
-(add-hook 'emacs-lisp-mode-hook 'lisp:edit-modes)
-(define-key emacs-lisp-mode-map (kbd "C-c TAB") 'auto-complete)
-(define-key emacs-lisp-mode-map (kbd "C-c SPC") 'ac-complete-with-helm)
+(defun emacs:hook ()
+  (lisp:edit-modes)
+  (company-mode t))
+(add-hook 'emacs-lisp-mode-hook 'emacs:hook)
+(define-key emacs-lisp-mode-map (kbd "C-c TAB") 'company-complete)
+(define-key emacs-lisp-mode-map (kbd "C-c SPC") 'helm-company)
 
 ;; COMMON LISP -----------------
 (defcustom inferior-lisp-program "sbcl"
@@ -56,12 +58,15 @@
 
 (add-hook 'lisp-mode-hook 'cl:edit-mode)
 (add-hook 'slime-repl-mode-hook 'cl:repl-modes)
-(cl:key "C-c d"       #'slime-documentation)
+(add-to-list 'auto-mode-alist '("\\.abclrc\\'" . common-lisp-mode))
+(add-to-list 'auto-mode-alist '("\\.sbclrc\\'" . common-lisp-mode))
+(cl:key "C-c d"       #'slime-describe-symbol)
 (cl:key "C-c <C-tab>" #'slime-complete-symbol)
 (cl:key "C-c C-p"     #'slime-repl-set-package)
 (cl:key "C-c M-p"     #'slime-repl-pop-package)
 (cl:key "C-c s r"     #'slime-restart-inferior-lisp)
 (cl:key "C-c m"       #'slime-macroexpand-1)
+(cl:key "C-c w"       #'slime-pprint-eval-last-expression)
 (cl:key "C-c M-p"     #'slime-repl-set-package)
 (cl:key "M-."         #'slime-edit-definition)
 (cl:key "C-c TAB"     #'auto-complete)

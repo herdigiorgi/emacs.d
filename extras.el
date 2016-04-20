@@ -1,3 +1,5 @@
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2)
 (put 'erase-buffer 'disabled nil)
 ;; AUTOSAVE
 (setq backup-directory-alist

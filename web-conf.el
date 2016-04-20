@@ -13,3 +13,14 @@
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-part-face t)
 (setq web-mode-enable-comment-keywords t)
+
+;;
+;; JS
+;;
+
+(setq js-indent-level 2)
+(defun js:mode-hook ()
+  (indent-guide-mode 1)
+  (rainbow-delimiters-mode 1))
+
+(add-hook 'js-mode-hook 'js:mode-hook)
