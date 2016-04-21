@@ -52,4 +52,3 @@
 (global-set-key (kbd "C-c p p") #'helm-projectile-switch-project)
 (global-set-key (kbd "C-c p f") #'helm-projectile-find-file)
 (global-set-key (kbd "C-c b l") #'helm-buffers-list)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)

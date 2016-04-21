@@ -7,14 +7,12 @@
     (clojure.tools.namespace.repl/set-refresh-dirs 
       \"src/main/clojure\" \"src\"
       \"src/test/clojure\" \"test\")
-    (when (resolve 'user/stop-app)
-      (print :stop-app (eval '(user/stop-app))))
+    (when (resolve 'dev/stop)
+      (print :stop-app (eval '(dev/stop))))
     (let [refresh-result (clojure.tools.namespace.repl/refresh)]
       (when-not (instance? java.lang.Exception refresh-result)
-        (when (.exists (java.io.File. \"./dev-src/user.clj\"))
-          (load-file \"./dev-src/user.clj\"))
-        (when (resolve 'user/start-app)
-          (print :start-app (eval '(user/start-app)))))
+        (when (resolve 'dev/start)
+          (print :start-app (eval '(dev/start)))))
       (print refresh-result)
       refresh-result)"))
 
@@ -36,7 +34,6 @@
     (d "C-c d"     'cider-doc)
     (d "C-c C-c"   'cider-eval-defun-at-point)
     (d "C-c s r"   'cider-restart)
-    (d "C-c t"     'clojure:run-tests)
     (d "C-c TAB"   'helm-company)
     (d "C-c r"     'clojure:namespace-refresh)
     (d "C-c M-j"   'cider-jack-in)
@@ -51,6 +48,7 @@
 
 (defun clojure:repl-hook ()
   (company-mode t)
+  (paredit-mode t)
   (projectile-mode t))
 
 (add-hook 'clojure-mode-hook 'clojure:hook)

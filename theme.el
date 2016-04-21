@@ -12,6 +12,7 @@
 
 (nyan-mode 1)
 (nyan-start-animation)
+(setq nyan-wavy-trail t)
 (setq nyan-bar-length 10)
 
 ;(defun remove-all-bars-after-make-frame (f) (remove-all-bars))
