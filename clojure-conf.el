@@ -36,6 +36,7 @@
     (d "C-c s r"   'cider-restart)
     (d "C-c TAB"   'helm-company)
     (d "C-c r"     'clojure:namespace-refresh)
+    (d "C-c t"     'clojure:run-tests)
     (d "C-c M-j"   'cider-jack-in)
     (d "C-c M-x"   'clojure:connect-repl)))
 
