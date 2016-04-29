@@ -33,6 +33,7 @@
 	highlight-parentheses
 	hl-sexp
 	rainbow-blocks
+        highlight-80+
 
 	fsharp-mode
 	cider

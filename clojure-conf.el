@@ -19,7 +19,11 @@
 (defun clojure:run-tests ()
   (interactive)
   (save-some-buffers)
-  (cider-test-run-project-tests))
+  (cider-interactive-eval
+   "(ns user)
+    (if (resolve 'test/test)
+      (eval '(test/test))
+      (print :test \"no test/test found\"))"))
 
 (defun clojure:connect-repl ()
   (interactive)
