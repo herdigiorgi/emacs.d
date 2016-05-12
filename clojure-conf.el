@@ -21,8 +21,8 @@
   (save-some-buffers)
   (cider-interactive-eval
    "(ns user)
-    (if (resolve 'test/test)
-      (eval '(test/test))
+    (if (resolve 'test/do-test)
+      (eval '(test/do-test))
       (print :test \"no test/test found\"))"))
 
 (defun clojure:connect-repl ()
