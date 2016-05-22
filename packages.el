@@ -37,6 +37,7 @@
 
 	fsharp-mode
 	cider
+        ac-cider
 	web-mode))
 
 (defun pkg:load-packages ()

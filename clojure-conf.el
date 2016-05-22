@@ -16,6 +16,7 @@
       (print refresh-result)
       refresh-result)"))
 
+(cider-auto-test-mode 1)
 (defun clojure:run-tests ()
   (interactive)
   (save-some-buffers)
@@ -44,17 +45,29 @@
     (d "C-c M-j"   'cider-jack-in)
     (d "C-c M-x"   'clojure:connect-repl)))
 
+(defun clojure:setup-ac ()
+  (ac-flyspell-workaround)
+  (ac-cider-setup)
+  (ac-cider-setup))
+
+(eval-after-load "auto-complete"
+  '(progn
+     (add-to-list 'ac-modes 'cider-mode)
+     (add-to-list 'ac-modes 'cider-repl-mode)))
+
 (defun clojure:hook ()
   (cider-mode)
   (lisp:edit-modes)
   (auto-complete-mode -1)
   (company-mode t)
-  (clojure:config-shortcuts))
+  (clojure:config-shortcuts)
+  (clojure:setup-ac))
 
 (defun clojure:repl-hook ()
   (company-mode t)
   (paredit-mode t)
-  (projectile-mode t))
+  (projectile-mode t)
+  (clojure:setup-ac))
 
 (add-hook 'clojure-mode-hook 'clojure:hook)
 (add-hook 'cider-repl-mode-hook 'clojure:repl-hook)
