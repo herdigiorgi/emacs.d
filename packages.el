@@ -38,7 +38,11 @@
 	fsharp-mode
 	cider
         ac-cider
-	web-mode))
+	web-mode
+
+        dockerfile-mode
+
+        sql-indent))
 
 (defun pkg:load-packages ()
   (package-initialize)
