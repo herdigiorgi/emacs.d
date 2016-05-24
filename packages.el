@@ -42,7 +42,8 @@
 
         dockerfile-mode
 
-        sql-indent))
+        sql-indent
+        emacsql-psql ))
 
 (defun pkg:load-packages ()
   (package-initialize)
@@ -56,5 +57,3 @@
 
 (pkg:load-packages)
 (helm-projectile-on)
-
-
