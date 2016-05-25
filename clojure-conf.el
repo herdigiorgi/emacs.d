@@ -13,8 +13,8 @@
       (when-not (instance? java.lang.Exception refresh-result)
         (when (resolve 'dev/start)
           (print :start-app (eval '(dev/start)))))
-      (print refresh-result)
-      refresh-result)"))
+      (print (.toString refresh-result))
+      (.toString refresh-result))"))
 
 (cider-auto-test-mode 1)
 (defun clojure:run-tests ()
