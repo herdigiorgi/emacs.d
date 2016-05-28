@@ -19,12 +19,7 @@
 (cider-auto-test-mode 1)
 (defun clojure:run-tests ()
   (interactive)
-  (save-some-buffers)
-  (cider-interactive-eval
-   "(ns user)
-    (if (resolve 'test/do-test)
-      (eval '(test/do-test))
-      (print :test \"no test/test found\"))"))
+  (cider-test-run-project-tests))
 
 (defun clojure:connect-repl ()
   (interactive)
