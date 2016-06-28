@@ -23,3 +23,4 @@
 (load.d "hs-conf")
 (load.d "fsharp-conf")
 (load.d "web-conf")
+(load.d "sql-conf")

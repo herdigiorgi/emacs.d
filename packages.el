@@ -42,6 +42,7 @@
 
         dockerfile-mode
 
+        sql
         sql-indent
         emacsql-psql ))
 
