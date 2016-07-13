@@ -24,3 +24,4 @@
 (load.d "fsharp-conf")
 (load.d "web-conf")
 (load.d "sql-conf")
+(load.d "coffee-config")

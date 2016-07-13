@@ -19,6 +19,7 @@
 	calmer-forest-theme
 	birds-of-paradise-plus-theme
 	nyan-mode
+        neotree
 	
 	projectile
 	helm
@@ -38,13 +39,15 @@
 	fsharp-mode
 	cider
         ac-cider
+        
 	web-mode
-
+        coffee-mode
+        
         dockerfile-mode
 
         sql
         sql-indent
-        emacsql-psql ))
+        emacsql-psql))
 
 (defun pkg:load-packages ()
   (package-initialize)

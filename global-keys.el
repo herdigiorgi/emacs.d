@@ -54,3 +54,5 @@
 (global-set-key (kbd "C-c b l") #'helm-buffers-list)
 
 (global-set-key (kbd "C-c s c d") 'sql-connect-default)
+
+(global-set-key (kbd "<f12>") 'neotree-toggle)

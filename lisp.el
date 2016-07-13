@@ -25,6 +25,7 @@
 (add-hook 'emacs-lisp-mode-hook 'emacs:hook)
 (define-key emacs-lisp-mode-map (kbd "C-c TAB") 'company-complete)
 (define-key emacs-lisp-mode-map (kbd "C-c SPC") 'helm-company)
+(define-key emacs-lisp-mode-map (kbd "C-c C-c") 'eval-defun)
 
 ;; COMMON LISP -----------------
 (defcustom inferior-lisp-program "sbcl"
