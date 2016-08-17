@@ -1,3 +1,5 @@
+(setq cider-inject-dependencies-at-jack-in nil)
+
 (defun clojure:namespace-refresh ()
   (interactive)
   (save-some-buffers)

@@ -1,8 +1,7 @@
 (require 'package)
-(dolist (i '(("marmalade" . "http://marmalade-repo.org/packages/")
-	     ("elpa" . "http://tromey.com/elpa/")
-	     ("melpa" . "http://melpa.milkbox.net/packages/")))
-  (add-to-list 'package-archives i t))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 
 (setq pkg:packages
       '(slime
@@ -20,7 +19,8 @@
 	birds-of-paradise-plus-theme
 	nyan-mode
         neotree
-	
+
+	dash
 	projectile
 	helm
 	helm-projectile
@@ -41,13 +41,16 @@
         ac-cider
         
 	web-mode
+        js2-mode
         coffee-mode
+        json
+        flycheck
         
-        dockerfile-mode
-
-        sql
+	sql
         sql-indent
-        emacsql-psql))
+        emacsql-psql
+
+        highlight-chars))
 
 (defun pkg:load-packages ()
   (package-initialize)
