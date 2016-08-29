@@ -24,11 +24,13 @@
 (global-set-key (kbd "C-c <C-left>")  'other-frame)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 
-(global-set-key (kbd "C-c h t")   #'hs-toogle-hiding)
-(global-set-key (kbd "C-c h h a") #'hs-hide-all)
-(global-set-key (kbd "C-c h s a") #'hs-show-all)
-(global-set-key (kbd "C-c h s b") #'hs-show-block)
-(global-set-key (kbd "C-c h h b") #'hs-hide-block)
+(global-set-key (kbd "C-c h t")   #'vimish-fold-toggle-all)
+(global-set-key (kbd "C-c h h a") #'vimish-fold-refold-all)
+(global-set-key (kbd "C-c h s a") #'vimish-fold-unfold-all)
+(global-set-key (kbd "C-c h s b") #'vimish-fold-unfold)
+(global-set-key (kbd "C-c h h b") #'vimish-fold)
+(global-set-key (kbd "C-c h d b") #'vimish-fold-delete)
+(global-set-key (kbd "C-c h d a") #'vimish-fold-delete-all)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 

@@ -13,11 +13,8 @@
 	ac-helm
 	fill-column-indicator
 
-	solarized-theme
-	monokai-theme
-	calmer-forest-theme
-	birds-of-paradise-plus-theme
-	nyan-mode
+
+        monokai-theme
         neotree
 
 	dash
@@ -26,6 +23,7 @@
 	helm-projectile
 	paredit
 	hideshow
+        vimish-fold
 	rainbow-delimiters
 	rainbow-identifiers
 	multiple-cursors
@@ -36,7 +34,6 @@
 	rainbow-blocks
         highlight-80+
 
-	fsharp-mode
 	cider
         ac-cider
         

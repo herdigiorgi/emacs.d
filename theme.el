@@ -1,6 +1,7 @@
-(load-theme 'birds-of-paradise-plus t) 
+(load-theme 'monokai)
+
 (setq visible-bell 1)
-;(global-hl-line-mode)
+(global-hl-line-mode 0)
 (set-face-attribute 'default nil :height 100)
 (setq ring-bell-function 'ignore)
 
@@ -10,12 +11,8 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(nyan-mode 1)
-(nyan-start-animation)
-(setq nyan-wavy-trail t)
-(setq nyan-bar-length 10)
-
 ;(defun remove-all-bars-after-make-frame (f) (remove-all-bars))
 ;(add-hook 'server-visit-hook 'remove-all-bars)
 ;(add-hook 'after-make-frame-functions 'remove-all-bars-after-make-frame)
 ;(remove-all-bars)
+

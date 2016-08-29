@@ -2,8 +2,9 @@
 
 !.gitignore
 !.projectile
+
+
 !global-keys.el
-!hs-conf.el
 !init.el
 !lisp.el
 !packages.el
@@ -11,6 +12,7 @@
 !extras.el
 !auto-complete-conf.el
 !clojure-conf.el
-!fsharp-conf.el
+!ocaml-conf.el
 !web-conf.el
+!js-conf.el
 !sql-conf.el
