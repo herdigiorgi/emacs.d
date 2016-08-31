@@ -1,4 +1,4 @@
-(load-theme 'monokai)
+(load-theme 'sanityinc-tomorrow-blue)
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)

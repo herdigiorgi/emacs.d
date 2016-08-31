@@ -6,14 +6,15 @@
 (setq pkg:packages
       '(slime
 	magit
-	auto-complete
+        fuzzy
+        auto-complete
 	company
 	helm-company
 	ac-slime
 	ac-helm
 	fill-column-indicator
 
-
+        color-theme-sanityinc-tomorrow
         monokai-theme
         neotree
 

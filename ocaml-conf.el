@@ -8,6 +8,8 @@
 (add-hook 'caml-mode-hook 'merlin-mode t)
 ;; Enable auto-complete
 (setq merlin-use-auto-complete-mode 'easy)
+(with-eval-after-load 'company
+ (add-to-list 'company-backends 'merlin-company-backend))
 ;; Use opam switch to lookup ocamlmerlin binary
 (setq merlin-command 'opam)
 
@@ -19,15 +21,23 @@
 
 ;; KEYS
 (require 'tuareg)
-(define-key tuareg-mode-map (kbd "C-c TAB") 'auto-complete)
+(define-key tuareg-mode-map (kbd "C-c TAB") 'company-complete)
+(define-key tuareg-mode-map (kbd "C-c SPC") 'helm-company)
+(define-key merlin-mode-map (kbd "M-.") 'merlin-locate)
+(define-key merlin-mode-map (kbd "C-c d") 'merlin-document)
+(define-key merlin-mode-map (kbd "C-c t") 'merlin-type-enclosing)
+(define-key merlin-mode-map (kbd "C-c s i") 'merlin-switch-to-mli)
+(define-key merlin-mode-map (kbd "C-c s l") 'merlin-switch-to-ml)
+
 
 ;; HOOK
 (defun caml/hook ()
+  (electric-pair-mode 1)
   (paredit-mode 1)
-  (indent-guide-mode 1)
+  (auto-complete 0)
+  (company-mode 1)
   (rainbow-identifiers-mode 1)
   (closest-makefile-hook)
-  (rainbow-delimiters-mode 1)
-  )
+  (rainbow-delimiters-mode 1))
 
 (add-hook 'tuareg-mode-hook 'caml/hook t)

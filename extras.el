@@ -8,8 +8,10 @@
       `((".*" ,temporary-file-directory t)))
 (ido-mode 1)
 
-
-;; Find closest makefile
+;;;
+;;; Find closest makefile
+;;;
+(setq compilation-scroll-output t)
 (defun* get-closest-pathname (&optional (file "Makefile"))
   "Determine the pathname of the first instance of FILE starting from the 
    current directory towards root. This may not do the correct thing in 

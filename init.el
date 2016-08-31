@@ -13,7 +13,6 @@
 
 (load.d "lisp")
 (load.d "clojure-conf")
-(load.d "hs-conf")
 (load.d "web-conf")
 (load.d "sql-conf")
 (load.d "js-conf")
