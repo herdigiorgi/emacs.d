@@ -37,7 +37,10 @@
 
 	cider
         ac-cider
-        
+
+        yaml-mode
+        flymake-jslint
+        markdown-mode+
 	web-mode
         js2-mode
         coffee-mode

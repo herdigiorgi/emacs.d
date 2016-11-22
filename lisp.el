@@ -15,7 +15,7 @@
   (highlight-parentheses-mode 1)
   (rainbow-delimiters-mode 1)
   (rainbow-identifiers-mode 1)
-  (hl-sexp-mode 1)
+  (hl-sexp-mode 0)
   (highlight-80+-mode t))
 
 ;; Emacs
@@ -28,7 +28,7 @@
 (define-key emacs-lisp-mode-map (kbd "C-c C-c") 'eval-defun)
 
 ;; COMMON LISP -----------------
-(defcustom inferior-lisp-program "sbcl"
+(defcustom inferior-lisp-program "ccl"
   "Set the path to your common lisp implementation"
   :type '(file :must-match t)
   :group 'common-lisp)
@@ -50,8 +50,11 @@
 
 (defun cl:edit-mode ()
   (lisp:edit-modes)
+  (set (make-local-variable 'lisp-indent-function)
+		  'common-lisp-indent-function)     
   (set-up-slime-ac)
-  (slime-mode))
+  (slime-mode)
+  (set (make-local-variable 'ac-ignore-case) nil))
 
 (defun cl:repl-modes ()
   (set-up-slime-ac)

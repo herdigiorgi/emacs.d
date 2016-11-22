@@ -19,15 +19,23 @@
 
 (load "~/.opam/4.03.0/share/emacs/site-lisp/tuareg-site-file")
 
+(defun caml/compile ()
+  (interactive)
+  (set-closest-makefile)
+  (compile compile-command))
+
 ;; KEYS
 (require 'tuareg)
 (define-key tuareg-mode-map (kbd "C-c TAB") 'company-complete)
 (define-key tuareg-mode-map (kbd "C-c SPC") 'helm-company)
+(define-key tuareg-mode-map (kbd "C-S-c TAB") 'company-complete)
+(define-key tuareg-mode-map (kbd "C-S-c SPC") 'helm-company)
 (define-key merlin-mode-map (kbd "M-.") 'merlin-locate)
 (define-key merlin-mode-map (kbd "C-c d") 'merlin-document)
 (define-key merlin-mode-map (kbd "C-c t") 'merlin-type-enclosing)
 (define-key merlin-mode-map (kbd "C-c s i") 'merlin-switch-to-mli)
 (define-key merlin-mode-map (kbd "C-c s l") 'merlin-switch-to-ml)
+(define-key merlin-mode-map (kbd "C-c C-c") 'caml/compile)
 
 
 ;; HOOK
@@ -37,7 +45,6 @@
   (auto-complete 0)
   (company-mode 1)
   (rainbow-identifiers-mode 1)
-  (closest-makefile-hook)
   (rainbow-delimiters-mode 1))
 
 (add-hook 'tuareg-mode-hook 'caml/hook t)

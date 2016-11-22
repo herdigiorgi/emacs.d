@@ -26,7 +26,7 @@
 			if (equal d root)
 			return nil))))
 
-(defun closest-makefile-hook ()
+(defun set-closest-makefile ()
   (let* ((makefile-path (get-closest-pathname))
          (makefile-dir (file-name-directory makefile-path)))
     (set (make-local-variable 'compile-command)
