@@ -1,4 +1,4 @@
-(load-theme 'sanityinc-tomorrow-blue)
+(load-theme 'dracula t)
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)

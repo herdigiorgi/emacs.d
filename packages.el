@@ -16,6 +16,7 @@
 
         color-theme-sanityinc-tomorrow
         monokai-theme
+        dracula-theme
         neotree
 
 	dash
@@ -33,7 +34,6 @@
 	highlight-parentheses
 	hl-sexp
 	rainbow-blocks
-        highlight-80+
 
 	cider
         ac-cider

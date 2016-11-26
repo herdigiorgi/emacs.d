@@ -15,8 +15,7 @@
   (highlight-parentheses-mode 1)
   (rainbow-delimiters-mode 1)
   (rainbow-identifiers-mode 1)
-  (hl-sexp-mode 0)
-  (highlight-80+-mode t))
+  (hl-sexp-mode 0))
 
 ;; Emacs
 (defun emacs:hook ()

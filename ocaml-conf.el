@@ -14,10 +14,10 @@
 (setq merlin-command 'opam)
 
 
-(add-to-list 'load-path "~/.opam/4.03.0/share/emacs/site-lisp")
+(add-to-list 'load-path "~/.opam/4.04.0/share/emacs/site-lisp")
 (require 'ocp-indent)
 
-(load "~/.opam/4.03.0/share/emacs/site-lisp/tuareg-site-file")
+(load "~/.opam/4.04.0/share/emacs/site-lisp/tuareg-site-file")
 
 (defun caml/compile ()
   (interactive)
@@ -42,7 +42,7 @@
 (defun caml/hook ()
   (electric-pair-mode 1)
   (paredit-mode 1)
-  (auto-complete 0)
+  (auto-complete-mode 0)
   (company-mode 1)
   (rainbow-identifiers-mode 1)
   (rainbow-delimiters-mode 1))
