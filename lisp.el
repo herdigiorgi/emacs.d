@@ -5,8 +5,8 @@
   (show-paren-mode 1)
   (projectile-mode 1)
   (hs-minor-mode 1)
-  (eldoc-mode t)
-  (auto-complete-mode t))
+  (company-mode 1)
+  (eldoc-mode 1))
 
 (defun lisp:edit-modes ()
   (prettify-symbols-mode 1)
@@ -19,11 +19,8 @@
 
 ;; Emacs
 (defun emacs:hook ()
-  (lisp:edit-modes)
-  (company-mode t))
+  (lisp:edit-modes))
 (add-hook 'emacs-lisp-mode-hook 'emacs:hook)
-(define-key emacs-lisp-mode-map (kbd "C-c TAB") 'company-complete)
-(define-key emacs-lisp-mode-map (kbd "C-c SPC") 'helm-company)
 (define-key emacs-lisp-mode-map (kbd "C-c C-c") 'eval-defun)
 
 ;; COMMON LISP -----------------

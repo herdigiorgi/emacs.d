@@ -35,9 +35,12 @@
 	hl-sexp
 	rainbow-blocks
 
+        clojure-mode
 	cider
         ac-cider
-
+        cider-eval-sexp-fu
+        clj-refactor
+        
         yaml-mode
         flymake-jslint
         markdown-mode+
@@ -51,7 +54,8 @@
         sql-indent
         emacsql-psql
 
-        highlight-chars))
+        highlight-chars
+        nyan-mode))
 
 (defun pkg:load-packages ()
   (package-initialize)

@@ -1,12 +1,20 @@
 (setq-default indent-tabs-mode nil)
 (setq tab-width 2)
 (put 'erase-buffer 'disabled nil)
+(setq inhibit-startup-screen t)
 ;; AUTOSAVE
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 (ido-mode 1)
+
+;; NYAN
+(require 'nyan-mode)
+(setq nyan-animate-nyancat t)
+(setq nyan-wavy-trail t)
+(nyan-start-animation)
+(nyan-mode 1)
 
 ;;;
 ;;; Find closest makefile
