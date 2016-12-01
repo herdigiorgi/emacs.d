@@ -17,5 +17,4 @@
 (load.d "sql-conf")
 (load.d "js-conf")
 (load.d "yaml-conf")
-(load.d "ocaml-conf")
 
