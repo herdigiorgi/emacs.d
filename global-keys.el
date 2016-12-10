@@ -13,12 +13,6 @@
   (my-insert-after-point "·")
   (forward-char))
 
-(defun global-key (key-string function)
-  (global-set-key (kbd key-string) function))
-
-(global-key "C-c TAB" 'company-complete)
-(global-key "C-c SPC" 'helm-company)
-
 (global-set-key (kbd "C-$") 'my-insert-tilde)
 (global-set-key (kbd "C-t") 'my-insert-grave-accent)
 (global-set-key (kbd "C-#") 'my-interpunct)
