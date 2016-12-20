@@ -9,12 +9,6 @@
       `((".*" ,temporary-file-directory t)))
 (ido-mode 1)
 
-;; NYAN
-(require 'nyan-mode)
-(setq nyan-animate-nyancat t)
-(setq nyan-wavy-trail t)
-(nyan-start-animation)
-(nyan-mode 1)
 
 ;;;
 ;;; Find closest makefile

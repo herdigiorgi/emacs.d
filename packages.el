@@ -44,9 +44,7 @@
         yaml-mode
         flymake-jslint
         markdown-mode+
-	web-mode
-        js2-mode
-        coffee-mode
+        web-mode
         json
         flycheck
         
@@ -55,7 +53,15 @@
         emacsql-psql
 
         highlight-chars
-        nyan-mode))
+        nyan-mode
+        yascroll
+        
+
+        js3-mode
+        tern
+        nodejs-repl
+
+        ))
 
 (defun pkg:load-packages ()
   (package-initialize)
