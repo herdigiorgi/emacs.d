@@ -26,6 +26,16 @@
   (interactive)
   (cider-connect "localhost" 4005))
 
+(defun clojure:start-clojurescript ()
+  (interactive)
+  (cider-interactive-eval
+   "(ns user)
+    (println \"Starting clojurescript, please stand by...\")
+    (use 'figwheel-sidecar.repl-api)
+    (start-figwheel!)
+    (cljs-repl)
+    \"ready!\""))
+
 (defun clojure:config-shortcuts ()
   (cl-flet ((d (key func)
 	       (let ((keymap (kbd key)))
@@ -40,7 +50,8 @@
     (d "C-c M-j"   'cider-jack-in)
     (d "C-c M-x"   'clojure:connect-repl)
     (d "C-c TAB"   'company-complete)
-    (d "C-c SPC"   'helm-company)))
+    (d "C-c SPC"   'helm-company)
+    (d "C-c j r" 'clojure:start-clojurescript)))
 
 (defun clojure:hook ()
   (cider-mode)
