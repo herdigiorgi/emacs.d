@@ -7,7 +7,8 @@
     (require 'clojure.tools.namespace.repl)
     (clojure.tools.namespace.repl/set-refresh-dirs 
       \"src/main/clojure\" \"src\"
-      \"src/test/clojure\" \"test\")
+      \"src/test/clojure\" \"test\"
+      \"src-dev/clj\")
     (when (resolve 'dev/stop)
       (print :stop-app (eval '(dev/stop))))
     (let [refresh-result (clojure.tools.namespace.repl/refresh)]
@@ -33,8 +34,16 @@
     (println \"Starting clojurescript, please stand by...\")
     (use 'figwheel-sidecar.repl-api)
     (start-figwheel!)
-    (cljs-repl)
-    \"ready!\""))
+    (println \"Clojurescript ready!... now you can connect\")"))
+
+(defun clojure:connect-clojurescript-repl ()
+  (interactive)
+  (cider-interactive-eval "(ns user) (cljs-repl)"))
+
+(defun cloure:quit-clojurescript ()
+  (interactive)
+  (cider-interactive-eval
+   ":cljs/quit"))
 
 (defun clojure:config-shortcuts ()
   (cl-flet ((d (key func)
@@ -51,7 +60,9 @@
     (d "C-c M-x"   'clojure:connect-repl)
     (d "C-c TAB"   'company-complete)
     (d "C-c SPC"   'helm-company)
-    (d "C-c j r" 'clojure:start-clojurescript)))
+    (d "C-c j s"   'clojure:start-clojurescript)
+    (d "C-c j c"   'clojure:connect-clojurescript-repl)
+    (d "C-c j q"   'cloure:quit-clojurescript)))
 
 (defun clojure:hook ()
   (cider-mode)

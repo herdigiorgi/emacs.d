@@ -18,6 +18,7 @@
         monokai-theme
         dracula-theme
         neotree
+        centered-window-mode
 
 	dash
 	projectile

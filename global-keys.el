@@ -58,6 +58,7 @@
 (global-set-key (kbd "C-c s c d") 'sql-connect-default)
 
 (global-set-key (kbd "<f12>") 'neotree-toggle)
+(global-set-key (kbd "<f3>") 'centered-window-mode)
 
 
 
