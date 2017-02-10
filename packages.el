@@ -1,7 +1,7 @@
 (require 'package)
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")))
 
 (setq pkg:packages
       '(slime
@@ -17,6 +17,7 @@
         color-theme-sanityinc-tomorrow
         monokai-theme
         dracula-theme
+        sublime-themes
         neotree
         centered-window-mode
 
@@ -54,7 +55,6 @@
         emacsql-psql
 
         highlight-chars
-        nyan-mode
         yascroll
         
 

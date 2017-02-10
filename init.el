@@ -12,7 +12,7 @@
 (load.d "auto-complete-conf")
 
 (load.d "lisp")
-(load.d "clojure-conf")
+;(load.d "clojure-conf")
 (load.d "web-conf")
 (load.d "sql-conf")
 (load.d "js-conf")

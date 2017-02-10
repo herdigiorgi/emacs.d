@@ -1,4 +1,4 @@
-(load-theme 'dracula t)
+(load-theme 'monokai t)
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)
@@ -16,12 +16,6 @@
 ;(add-hook 'after-make-frame-functions 'remove-all-bars-after-make-frame)
 ;(remove-all-bars)
 
-;; NYAN
-(require 'nyan-mode)
-(setq nyan-animate-nyancat t)
-(setq nyan-wavy-trail t)
-(nyan-start-animation)
-(nyan-mode 1)
-
 ;; SCROLL
 (yascroll-bar-mode 1)
+

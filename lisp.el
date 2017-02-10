@@ -29,23 +29,40 @@
   :type '(file :must-match t)
   :group 'common-lisp)
 
-(slime-setup '(slime-fancy
-               slime-asdf
-               slime-banner))
-(setq cl:modes-map (list slime-mode-map slime-repl-mode-map lisp-mode-map))
+(setq slime-contribs '(slime-fancy
+                       slime-asdf
+                       slime-banner))
 
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 (eval-after-load "auto-complete"  '(add-to-list 'ac-modes 'slime-repl-mode))
 
-
 (defun cl:key (map func)
-  (let ((map (kbd map)))
-    (cl-loop for mode-map in cl:modes-map do
+  (let ((modes-map (list slime-mode-map slime-repl-mode-map lisp-mode-map))
+        (map (kbd map)))
+    (cl-loop for mode-map in modes-map do
              (define-key mode-map map func))))
+
+(defun cl:define-all-keys ()
+  (cl:key "C-c l"       'common-lisp-load-system)
+  (cl:key "C-c t"       'common-lisp-test-system)
+  (cl:key "C-c s w"     'common-lisp-pcwd)
+  (cl:key "C-c i"       'slime-inspect)
+  (cl:key "C-c d"       'slime-describe-symbol)
+  (cl:key "C-c <C-tab>" 'slime-complete-symbol)
+  (cl:key "C-c C-p"     'slime-repl-set-package)
+  (cl:key "C-c M-p"     'slime-repl-pop-package)
+  (cl:key "C-c s r"     'slime-restart-inferior-lisp)
+  (cl:key "C-c m"       'slime-macroexpand-1)
+  (cl:key "C-c w"       'slime-pprint-eval-last-expression)
+  (cl:key "C-c M-p"     'slime-repl-set-package)
+  (cl:key "M-."         'slime-edit-definition)
+  (cl:key "C-c TAB"     'auto-complete)
+  (cl:key "C-c SPC"     'ac-complete-with-helm))
 
 (defun cl:edit-mode ()
   (lisp:edit-modes)
+  (cl:define-all-keys)
   (set (make-local-variable 'lisp-indent-function)
 		  'common-lisp-indent-function)     
   (set-up-slime-ac)
@@ -53,6 +70,7 @@
   (set (make-local-variable 'ac-ignore-case) nil))
 
 (defun cl:repl-modes ()
+  (cl:define-all-keys)
   (set-up-slime-ac)
   (lisp:shared-modes))
 
@@ -60,17 +78,7 @@
 (add-hook 'slime-repl-mode-hook 'cl:repl-modes)
 (add-to-list 'auto-mode-alist '("\\.abclrc\\'" . common-lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.sbclrc\\'" . common-lisp-mode))
-(cl:key "C-c d"       #'slime-describe-symbol)
-(cl:key "C-c <C-tab>" #'slime-complete-symbol)
-(cl:key "C-c C-p"     #'slime-repl-set-package)
-(cl:key "C-c M-p"     #'slime-repl-pop-package)
-(cl:key "C-c s r"     #'slime-restart-inferior-lisp)
-(cl:key "C-c m"       #'slime-macroexpand-1)
-(cl:key "C-c w"       #'slime-pprint-eval-last-expression)
-(cl:key "C-c M-p"     #'slime-repl-set-package)
-(cl:key "M-."         #'slime-edit-definition)
-(cl:key "C-c TAB"     #'auto-complete)
-(cl:key "C-c SPC"     #'ac-complete-with-helm)
+
 
 (defun common-lisp-repl ()
   (interactive)
@@ -104,8 +112,3 @@
 (defun* common-lisp-pcwd ()
   (interactive)
   (slime-repl-send-string "(UIOP/OS:GETCWD)"))
-
-(cl:key "C-c l" #'common-lisp-load-system)
-(cl:key "C-c t" #'common-lisp-test-system)
-(cl:key "C-c s w" #'common-lisp-pcwd)
-(cl:key "C-c i" #'slime-inspect)
