@@ -15,6 +15,7 @@
 	fill-column-indicator
 
         color-theme-sanityinc-tomorrow
+        nyan-mode
         monokai-theme
         dracula-theme
         sublime-themes

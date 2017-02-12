@@ -26,7 +26,8 @@
 
 (defun elixir:set-key-bindings ()
   (elixir:key "C-c TAB" 'company-complete)
-  (elixir:key "C-c d" 'alchemist-help-search-at-point))
+  (elixir:key "C-c d" 'alchemist-help-search-at-point)
+  (elixir:key "C-c SPC" 'helm-company))
 
 (defun elixir:one-time-config ()
   (remove-hook 'elixir-mode-hook 'elixir:one-time-config)
