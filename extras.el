@@ -2,6 +2,7 @@
 (setq tab-width 2)
 (put 'erase-buffer 'disabled nil)
 (setq inhibit-startup-screen t)
+
 ;; AUTOSAVE
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -9,6 +10,11 @@
       `((".*" ,temporary-file-directory t)))
 (ido-mode 1)
 
+;recentf
+(recentf-mode)
+
+; helm projectile
+(helm-projectile-on)
 
 ;;;
 ;;; Find closest makefile

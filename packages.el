@@ -19,7 +19,6 @@
         dracula-theme
         sublime-themes
         neotree
-        centered-window-mode
 
 	dash
 	projectile
@@ -62,6 +61,12 @@
         tern
         nodejs-repl
 
+        smartparens
+        
+        ruby-end
+        alchemist
+        ob-elixir
+        flycheck-mix
         ))
 
 (defun pkg:load-packages ()
@@ -75,4 +80,4 @@
 	(package-install p)))))
 
 (pkg:load-packages)
-(helm-projectile-on)
+(require 'smartparens-config)
