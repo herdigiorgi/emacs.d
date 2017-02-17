@@ -1,5 +1,8 @@
 (setq-default indent-tabs-mode nil)
-(setq tab-width 2)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
+
 (put 'erase-buffer 'disabled nil)
 (setq inhibit-startup-screen t)
 

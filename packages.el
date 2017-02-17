@@ -5,15 +5,15 @@
 
 (setq pkg:packages
       '(slime
-	magit
+        magit
         fuzzy
         auto-complete
-	company
-	helm-company
-	ac-slime
-	ac-helm
-	fill-column-indicator
-
+        company
+        helm-company
+        ac-slime
+        ac-helm
+        fill-column-indicator
+        
         color-theme-sanityinc-tomorrow
         nyan-mode
         monokai-theme
@@ -21,24 +21,24 @@
         sublime-themes
         neotree
 
-	dash
-	projectile
-	helm
-	helm-projectile
-	paredit
-	hideshow
+        dash
+        projectile
+        helm
+        helm-projectile
+        paredit
+        hideshow
         vimish-fold
-	rainbow-delimiters
-	rainbow-identifiers
-	multiple-cursors
-	indent-guide
-
-	highlight-parentheses
-	hl-sexp
-	rainbow-blocks
-
+        rainbow-delimiters
+        rainbow-identifiers
+        multiple-cursors
+        indent-guide
+        
+        highlight-parentheses
+        hl-sexp
+        rainbow-blocks
+        
         clojure-mode
-	cider
+        cider
         ac-cider
         cider-eval-sexp-fu
         clj-refactor
@@ -50,7 +50,7 @@
         json
         flycheck
         
-	sql
+        sql
         sql-indent
         emacsql-psql
 
@@ -68,6 +68,11 @@
         alchemist
         ob-elixir
         flycheck-mix
+
+        go-mode
+        go-autocomplete
+        go-eldoc
+        
         ))
 
 (defun pkg:load-packages ()

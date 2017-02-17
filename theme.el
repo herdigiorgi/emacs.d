@@ -24,3 +24,4 @@
 (nyan-start-animation)
 (setq nyan-wavy-trail t)
 (setq nyan-bar-length 10)
+

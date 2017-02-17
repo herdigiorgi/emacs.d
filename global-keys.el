@@ -8,14 +8,20 @@
 (defun my-box-brackets-left () (interactive) (my-insert-after-point "["))
 (defun my-curly-brackets-left () (interactive) (my-insert-after-point "{"))
 (defun my-curly-brackets-right () (interactive) (my-insert-after-point "}"))
+(defun my-back-slash () (interactive) (my-insert-after-point "\\"))
 
 (global-set-key (kbd "C-$") 'my-insert-tilde)
 (global-set-key (kbd "C-t") 'my-insert-grave-accent)
 (global-set-key (kbd "C-#") 'my-interpunct)
+(global-set-key (kbd "C-M-'") 'my-back-slash)
 (global-set-key (kbd "C-c C-b")     'windmove-left)
+(global-set-key (kbd "C-c <left>")     'windmove-left)
 (global-set-key (kbd "C-c C-f") 'windmove-right)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c C-p")    'windmove-up)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c C-n")  'windmove-down)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
 (global-set-key (kbd "C-c <C-right>") 'other-frame)
 (global-set-key (kbd "C-c <C-left>")  'other-frame)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
@@ -41,8 +47,8 @@
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 ;When you want to add multiple cursors not based on continuous
 ;lines, but based on keywords in the buffer, use:
-(global-set-key (kbd "C-w") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-q") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-M-w") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-M-q") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
 
 (global-set-key [f2]  'recentf-open-files)
