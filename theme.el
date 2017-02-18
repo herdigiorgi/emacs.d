@@ -1,7 +1,7 @@
 (load-theme 'junio t)
 
 (setq visible-bell 1)
-(global-hl-line-mode 0)
+(global-hl-line-mode 1)
 (set-face-attribute 'default nil :height 100)
 (setq ring-bell-function 'ignore)
 

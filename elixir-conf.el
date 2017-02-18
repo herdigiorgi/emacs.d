@@ -44,7 +44,7 @@
 (defun elixir:one-time-config ()
   (remove-hook 'elixir-mode-hook 'elixir:one-time-config)
   (elixir:auto-activate-ruby-end)
-  (elixir:config-smartparens)
+  ;(elixir:config-smartparens)
   (elixir:set-key-bindings)
   (elixir:config-flycheck))
 
