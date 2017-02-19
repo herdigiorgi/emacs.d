@@ -64,9 +64,7 @@
 
         smartparens
         
-        ruby-end
         alchemist
-        ob-elixir
         flycheck-mix
 
         go-mode

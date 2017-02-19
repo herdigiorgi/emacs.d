@@ -7,7 +7,7 @@
 (add-to-list 'load-path
              (file-name-as-directory
               (concat (file-name-as-directory
-                       (getenv "GOPATH"))
+                       (or (getenv "GOPATH") "go/"))
                       (file-name-as-directory
                        "src/github.com/golang/lint/misc/emacs"))))
 

@@ -33,11 +33,11 @@
 
 (defun elixir:hook ()
   (alchemist-mode 1)
+  (auto-complete-mode 0)
   (company-mode 1)
   (smartparens-mode 1)
   (flycheck-mode 1))
 
 (add-hook 'elixir-mode-hook 'elixir:one-time-config)
 (add-hook 'elixir-mode-hook 'elixir:hook)
-(add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-mode))
-(add-to-list 'auto-mode-alist '("\\.ex\\'" . exlixir-mode))
+
