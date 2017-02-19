@@ -1,4 +1,4 @@
-(load-theme 'junio t)
+(load-theme 'monokai t)
 
 (setq visible-bell 1)
 (global-hl-line-mode 1)

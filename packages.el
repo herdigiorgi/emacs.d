@@ -14,11 +14,11 @@
         ac-helm
         fill-column-indicator
         
-        color-theme-sanityinc-tomorrow
+        ;color-theme-sanityinc-tomorrow
         nyan-mode
         monokai-theme
-        dracula-theme
-        sublime-themes
+        ;dracula-theme
+        ;sublime-themes
         neotree
 
         dash
