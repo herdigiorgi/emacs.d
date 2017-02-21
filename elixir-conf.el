@@ -1,3 +1,10 @@
+(font-lock-add-keywords
+ 'elixir-mode
+ '(("->" . font-lock-keyword-face)
+   ("::" . font-lock-keyword-face)
+   ("@spec" . font-lock-keyword-face)
+   ("," . font-lock-keyword-face)))
+
 (defun iex () (interactive) (alchemist-iex-run))
 
 (defun elixir:config-flycheck ()
@@ -5,6 +12,9 @@
 
 (defun elixir:key (map func)
   (define-key elixir-mode-map (kbd map) func))
+
+(defun elixir:config-smartparens ()
+  (require 'smartparens-elixir))
 
 (defun elixir:iex:key (map func)
   (define-key alchemist-iex-mode-map (kbd map) func))
@@ -29,6 +39,7 @@
 (defun elixir:one-time-config ()
   (remove-hook 'elixir-mode-hook 'elixir:one-time-config)
   (elixir:set-key-bindings)
+  (elixir:config-smartparens)
   (elixir:config-flycheck))
 
 (defun elixir:hook ()
@@ -36,8 +47,10 @@
   (auto-complete-mode 0)
   (company-mode 1)
   (smartparens-mode 1)
-  (flycheck-mode 1))
+  (turn-on-smartparens-strict-mode)
+  (rainbow-delimiters-mode 1)
+  (flycheck-mode 1)
+  (indent-guide-mode 1))
 
 (add-hook 'elixir-mode-hook 'elixir:one-time-config)
 (add-hook 'elixir-mode-hook 'elixir:hook)
-

@@ -30,6 +30,7 @@
         vimish-fold
         rainbow-delimiters
         rainbow-identifiers
+        highlight-symbol
         multiple-cursors
         indent-guide
         
@@ -65,15 +66,17 @@
         smartparens
         
         alchemist
+        ruby-end
         flycheck-mix
 
         go-mode
         go-autocomplete
         go-eldoc
+        flycheck-gometalinter
         
         ))
 
-(defun pkg:load-packages ()
+(defun pkg:install-packages ()
   (package-initialize)
   (let ((pkgs (remove-if #'package-installed-p pkg:packages)))
     (when pkgs
@@ -81,7 +84,6 @@
       (package-refresh-contents)
       (message "%s" " done.")
       (dolist (p pkgs)
-	(package-install p)))))
+        (package-install p)))))
 
-(pkg:load-packages)
-(require 'smartparens-config)
+(pkg:install-packages)

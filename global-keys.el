@@ -1,13 +1,8 @@
 (defun my-insert-after-point (text) (save-excursion (insert text))(forward-char))
+(defun my-insert-after-point (text) (insert text))
 (defun my-insert-grave-accent () (interactive) (my-insert-after-point "`"))
 (defun my-insert-tilde () (interactive) (my-insert-after-point "~"))
 (defun my-interpunct () (interactive) (my-insert-after-point "·"))
-(defun my-< () (interactive) (my-insert-after-point "<"))
-(defun my-> () (interactive) (my-insert-after-point ">"))
-(defun my-box-brackets-right () (interactive) (my-insert-after-point "]"))
-(defun my-box-brackets-left () (interactive) (my-insert-after-point "["))
-(defun my-curly-brackets-left () (interactive) (my-insert-after-point "{"))
-(defun my-curly-brackets-right () (interactive) (my-insert-after-point "}"))
 (defun my-back-slash () (interactive) (my-insert-after-point "\\"))
 
 (global-set-key (kbd "C-$") 'my-insert-tilde)
@@ -25,6 +20,7 @@
 (global-set-key (kbd "C-c <C-right>") 'other-frame)
 (global-set-key (kbd "C-c <C-left>")  'other-frame)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
+(global-set-key (kbd "C-c v") 'highlight-symbol)
 
 (global-set-key (kbd "C-c h t")   #'vimish-fold-toggle-all)
 (global-set-key (kbd "C-c h h a") #'vimish-fold-refold-all)
@@ -35,12 +31,12 @@
 (global-set-key (kbd "C-c h d a") #'vimish-fold-delete-all)
 
 (global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-M-8") 'my-<)
-(global-set-key (kbd "C-M-9") 'my->)
-(global-set-key (kbd "M-0") 'my-box-brackets-left)
-(global-set-key (kbd "M-'") 'my-box-brackets-right)
-(global-set-key (kbd "M-8") 'my-curly-brackets-left)
-(global-set-key (kbd "M-9") 'my-curly-brackets-right)
+(global-set-key (kbd "C-M-8") (kbd "<"))
+(global-set-key (kbd "C-M-9") (kbd ">"))
+(global-set-key (kbd "M-0") (kbd "["))
+(global-set-key (kbd "M-'") (kbd "]"))
+(global-set-key (kbd "M-8") (kbd "{"))
+(global-set-key (kbd "M-9") (kbd "}"))
 
 ;When you have an active region that spans multiple lines,
 ;the following will add a cursor to each line:

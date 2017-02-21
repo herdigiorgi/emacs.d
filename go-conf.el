@@ -1,24 +1,43 @@
+; git config --global http.https://gopkg.in.followRedirects true
 ; go get -u golang.org/x/tools/cmd/goimports
 ; go get github.com/rogpeppe/godef
 ; go get -u golang.org/x/tools/cmd/godoc
 ; go get -u github.com/golang/lint/golint
 ; go get -u github.com/nsf/gocode
 
-(add-to-list 'load-path
-             (file-name-as-directory
-              (concat (file-name-as-directory
-                       (or (getenv "GOPATH") "go/"))
-                      (file-name-as-directory
-                       "src/github.com/golang/lint/misc/emacs"))))
+(defun go:add-load-path (path)
+  (add-to-list 'load-path
+               (file-name-as-directory
+                (concat (file-name-as-directory
+                         (or (getenv "GOPATH") "go/"))
+                        (file-name-as-directory
+                         path)))))
+
+(defun go:configure-lint ()
+  (flycheck-gometalinter-setup))
+
+(defun go:lint-toggle ()
+  (interactive)
+  (setq flycheck-gometalinter-disable-all
+        (not flycheck-gometalinter-disable-all)))
+
+(defun go:configure-autocomplete ()
+  (require 'go-autocomplete))
+
+(defun go:one-time-configuration ()
+  (remove-hook 'go-mode-hook 'go:one-time-configuration)
+  (go-eldoc-setup)
+  (go:configure-lint)
+  (go:configure-autocomplete))
 
 (defun go:enable-modes ()
-  (require 'go-autocomplete)
   (auto-complete-mode 1)
-  (go-eldoc-setup) (eldoc-mode 1)
-  (require 'golint)
+  (eldoc-mode 1)
   (rainbow-delimiters-mode 1)
   (rainbow-identifiers-mode 1)
-  (indent-guide-mode 1))
+  (indent-guide-mode 1)
+  (flycheck-mode 0)
+  (electric-pair-mode 1))
 
 (defun go:key (map func)
   (define-key go-mode-map (kbd map) func))
@@ -28,7 +47,9 @@
   (go:key "C-c SPC" 'ac-complete-with-helm)
   (go:key "M-." 'godef-jump)
   (go:key "C-c C-c" 'go:compile)
-  (go:key "C-c C-l" 'go:lint)
+  (go:key "C-c e s" 'flycheck-list-errors)
+  (go:key "C-c e t" 'go:lint-toggle)
+  (go:key "C-c e c" 'flycheck-clear)
   (go:key "C-c d" 'godoc-at-point))
 
 (defun go:compile ()
@@ -43,7 +64,7 @@
 (defun go:hook ()
   (go:fmt)
   (go:enable-modes)
-  (go:keys)
-  )
+  (go:keys))
 
+(add-hook 'go-mode-hook 'go:one-time-configuration)
 (add-hook 'go-mode-hook 'go:hook)

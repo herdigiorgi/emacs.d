@@ -19,6 +19,9 @@
 ; helm projectile
 (helm-projectile-on)
 
+;non intrusive flycheck
+(setq flycheck-check-syntax-automatically '(save))
+
 ;;;
 ;;; Find closest makefile
 ;;;
