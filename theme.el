@@ -1,8 +1,9 @@
 (load-theme 'monokai t)
 
 (setq visible-bell 1)
-(global-hl-line-mode 1)
-(set-face-attribute 'default nil :height 100)
+(global-hl-line-mode 0)
+(set-default-font "monofur")
+(set-face-attribute 'default nil :height 110)
 (setq ring-bell-function 'ignore)
 
 ; Remove any bars... only text
@@ -25,3 +26,6 @@
 (setq nyan-wavy-trail t)
 (setq nyan-bar-length 10)
 
+
+;fci
+(global-whitespace-mode 1)

@@ -20,7 +20,14 @@
 (helm-projectile-on)
 
 ;non intrusive flycheck
-(setq flycheck-check-syntax-automatically '(save))
+;(setq flycheck-check-syntax-automatically '(save))
+
+;smatparens
+(require 'smartparens-config)
+
+;yas
+(require 'yasnippet)
+(yas-reload-all)
 
 ;;;
 ;;; Find closest makefile

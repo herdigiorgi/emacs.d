@@ -20,7 +20,10 @@
         ;dracula-theme
         ;sublime-themes
         neotree
-
+        rainbow-delimiters
+        rainbow-identifiers
+        highlight-symbol
+        
         dash
         projectile
         helm
@@ -28,9 +31,7 @@
         paredit
         hideshow
         vimish-fold
-        rainbow-delimiters
-        rainbow-identifiers
-        highlight-symbol
+        
         multiple-cursors
         indent-guide
         
@@ -43,11 +44,15 @@
         ac-cider
         cider-eval-sexp-fu
         clj-refactor
+
+        ;html
+        web-mode
+        tagedit
         
         yaml-mode
         flymake-jslint
         markdown-mode+
-        web-mode
+        
         json
         flycheck
         
@@ -66,8 +71,12 @@
         smartparens
         
         alchemist
-        ruby-end
         flycheck-mix
+        elixir-mix
+        elixir-yasnippets
+        flycheck-credo
+        flycheck-dialyxir
+        flycheck-elixir
 
         go-mode
         go-autocomplete
