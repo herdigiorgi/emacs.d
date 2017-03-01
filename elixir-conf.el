@@ -74,6 +74,7 @@
   (auto-complete-mode 0)
   (company-mode 1)
   (smartparens-mode 1)
+  (indent-guide-mode 1)
   ;(turn-on-smartparens-strict-mode)
   (rainbow-delimiters-mode 1)
   ; (flycheck-mode 0) ;; not geting it work for the moment
@@ -90,14 +91,7 @@
 (add-hook 'alchemist-iex-mode-hook 'elixir:iex:hook)
 
 
-(defun alchemist-set-doc-buffer (doc)
-  (if (get-buffer alchemist-help-buffer-name)
-      (kill-buffer alchemist-help-buffer-name))
-  (let ((buffer (get-buffer-create alchemist-help-buffer-name)))
-    (with-current-buffer buffer
-      (insert doc)
-      (ansi-color-apply-on-region (point-min) (point-max))
-      (alchemist-help-minor-mode 1)
-      (beginning-of-buffer)
-      (switch-to-buffer-other-window alchemist-help-buffer-name))
-    (pop-to-buffer buffer)))
+(defun alchemist-utils-empty-string-p (string)
+  "Return non-nil if STRING is null, blank or whitespace only."
+  (or (null string)
+      (string= string "")))
