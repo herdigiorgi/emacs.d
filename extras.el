@@ -18,9 +18,10 @@
 
 ; helm projectile
 (helm-projectile-on)
+(setq projectile-indexing-method 'alien)
 
 ;non intrusive flycheck
-;(setq flycheck-check-syntax-automatically '(save))
+(setq flycheck-check-syntax-automatically '(save))
 
 ;smatparens
 (require 'smartparens-config)

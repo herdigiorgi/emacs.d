@@ -1,4 +1,3 @@
-
 ;; LISP ---------------------
 (defun lisp:shared-modes ()
   (paredit-mode t)
@@ -22,6 +21,8 @@
   (lisp:edit-modes))
 (add-hook 'emacs-lisp-mode-hook 'emacs:hook)
 (define-key emacs-lisp-mode-map (kbd "C-c C-c") 'eval-defun)
+(define-key emacs-lisp-mode-map (kbd "C-c TAB") 'company-complete)
+(define-key emacs-lisp-mode-map (kbd "C-c SPC") 'helm-company)
 
 ;; COMMON LISP -----------------
 (defcustom inferior-lisp-program "ccl"
