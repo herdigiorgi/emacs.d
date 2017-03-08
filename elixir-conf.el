@@ -32,7 +32,7 @@
 (defun elixir:compile ()
   (interactive)
   (let* ((root (file-name-directory (get-closest-pathname "mix.exs")))
-         (mix-cmd "mix do compile, dialyzer")
+         (mix-cmd "mix do compile --warnings-as-errors, dialyzer")
          (cmd (format "cd %s && %s" root mix-cmd)))
     (compile cmd)))
 
@@ -67,14 +67,14 @@
   (remove-hook 'elixir-mode-hook 'elixir:one-time-config)
   (elixir:set-key-bindings)
   (elixir:config-smartparens)
-  (elixir:config-flycheck))
+  (elixir:config-flycheck)
+  (fix-alchemist-bugs))
 
 (defun elixir:hook ()
   (alchemist-mode 1)
   (auto-complete-mode 0)
   (company-mode 1)
   (smartparens-mode 1)
-  (indent-guide-mode 1)
   ;(turn-on-smartparens-strict-mode)
   (rainbow-delimiters-mode 1)
   ; (flycheck-mode 0) ;; not geting it work for the moment
@@ -90,8 +90,8 @@
 (add-hook 'elixir-mode-hook 'elixir:hook)
 (add-hook 'alchemist-iex-mode-hook 'elixir:iex:hook)
 
-
-(defun alchemist-utils-empty-string-p (string)
-  "Return non-nil if STRING is null, blank or whitespace only."
-  (or (null string)
-      (string= string "")))
+(defun fix-alchemist-bugs ()
+  (defun alchemist-utils-empty-string-p (string)
+    "Return non-nil if STRING is null, blank or whitespace only."
+    (or (null string)
+        (string= string ""))))
