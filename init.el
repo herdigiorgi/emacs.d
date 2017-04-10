@@ -20,4 +20,5 @@
 (load.d "js-conf")
 (load.d "yaml-conf")
 (load.d "html-conf")
+(load.d "markdown-conf")
 
