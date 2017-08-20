@@ -63,27 +63,10 @@
         highlight-chars
         yascroll
         
-
         js3-mode
         tern
-        nodejs-repl
 
-        smartparens
-        
-        alchemist
-        flycheck-mix
-        elixir-mix
-        elixir-yasnippets
-        flycheck-credo
-        flycheck-dialyxir
-        flycheck-elixir
-
-        go-mode
-        go-autocomplete
-        go-eldoc
-        flycheck-gometalinter
-        
-        ))
+        smartparens))
 
 (defun pkg:install-packages ()
   (package-initialize)

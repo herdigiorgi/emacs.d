@@ -25,10 +25,8 @@
 (define-key emacs-lisp-mode-map (kbd "C-c SPC") 'helm-company)
 
 ;; COMMON LISP -----------------
-(defcustom inferior-lisp-program "ccl"
-  "Set the path to your common lisp implementation"
-  :type '(file :must-match t)
-  :group 'common-lisp)
+(load (expand-file-name "~/.roswell/helper.el"))
+(setq inferior-lisp-program "ros -Q -l ~/.clinit run")
 
 (setq slime-contribs '(slime-fancy
                        slime-asdf
