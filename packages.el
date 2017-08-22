@@ -1,6 +1,5 @@
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")))
 
 (setq pkg:packages
@@ -15,9 +14,8 @@
         fill-column-indicator
         
         ;color-theme-sanityinc-tomorrow
-        nyan-mode
         monokai-theme
-        ;dracula-theme
+        dracula-theme
         ;sublime-themes
         neotree
         rainbow-delimiters
@@ -45,6 +43,13 @@
         cider-eval-sexp-fu
         clj-refactor
 
+        ;;elixir
+        ruby-end
+        alchemist
+        ob-elixir
+        flycheck-mix
+
+        
         ;html
         web-mode
         tagedit

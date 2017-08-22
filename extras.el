@@ -53,3 +53,11 @@
          (makefile-dir (file-name-directory makefile-path)))
     (set (make-local-variable 'compile-command)
          (format "cd %s && make -f %s" makefile-dir makefile-path))))
+
+;; Compile
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region compilation-filter-start (point))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)

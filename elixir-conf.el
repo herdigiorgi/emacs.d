@@ -78,11 +78,11 @@
   ;(turn-on-smartparens-strict-mode)
   (rainbow-delimiters-mode 1)
   ; (flycheck-mode 0) ;; not geting it work for the moment
-  (whitespace-mode 1)
   (yas-minor-mode 1))
 
 (defun elixir:iex:hook ()
   (company-mode 1)
+  (smartparens-mode 1)
   (rainbow-delimiters-mode 1)
   (rainbow-identifiers-mode 1))
 

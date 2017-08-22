@@ -31,10 +31,10 @@
 (global-set-key (kbd "C-c h d a") #'vimish-fold-delete-all)
 
 (global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-M-8") (kbd "<"))
-(global-set-key (kbd "C-M-9") (kbd ">"))
-(global-set-key (kbd "M-0") (kbd "["))
-(global-set-key (kbd "M-'") (kbd "]"))
+(global-set-key (kbd "M-6") (kbd "<"))
+(global-set-key (kbd "M-7") (kbd ">"))
+(global-set-key (kbd "C-M-o") (kbd "["))
+(global-set-key (kbd "C-M-p") (kbd "]"))
 (global-set-key (kbd "M-8") (kbd "{"))
 (global-set-key (kbd "M-9") (kbd "}"))
 

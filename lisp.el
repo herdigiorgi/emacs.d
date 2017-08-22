@@ -25,8 +25,8 @@
 (define-key emacs-lisp-mode-map (kbd "C-c SPC") 'helm-company)
 
 ;; COMMON LISP -----------------
-(load (expand-file-name "~/.roswell/helper.el"))
-(setq inferior-lisp-program "ros -Q -l ~/.clinit run")
+;(load (expand-file-name "~/.roswell/helper.el"))
+;(setq inferior-lisp-program "ros -Q -l ~/.clinit run")
 
 (setq slime-contribs '(slime-fancy
                        slime-asdf
