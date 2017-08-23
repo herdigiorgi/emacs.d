@@ -13,10 +13,7 @@
         ac-helm
         fill-column-indicator
         
-        ;color-theme-sanityinc-tomorrow
-        monokai-theme
-        dracula-theme
-        ;sublime-themes
+        abyss-theme
         neotree
         rainbow-delimiters
         rainbow-identifiers
