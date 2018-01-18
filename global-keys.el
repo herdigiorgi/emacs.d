@@ -63,7 +63,6 @@
 (global-set-key (kbd "<f3>") 'centered-window-mode)
 
 
-
 ;;
 ;; Smartparens
 ;;

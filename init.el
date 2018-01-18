@@ -12,6 +12,7 @@
 (load.d "auto-complete-conf")
 
 (load.d "lisp")
+(load.d "erlang-conf")
 (load.d "clojure-conf")
 (load.d "elixir-conf")
 (load.d "web-conf")

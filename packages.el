@@ -3,7 +3,10 @@
                          ("melpa" . "http://melpa.org/packages/")))
 
 (setq pkg:packages
-      '(slime
+      '(
+        use-package
+
+        slime
         magit
         fuzzy
         auto-complete
@@ -13,7 +16,8 @@
         ac-helm
         fill-column-indicator
         
-        abyss-theme
+        monokai-theme
+        dracula-theme
         neotree
         rainbow-delimiters
         rainbow-identifiers
@@ -40,10 +44,15 @@
         cider-eval-sexp-fu
         clj-refactor
 
+
+        ;;erlang
+        erlang
+        edts
+        ivy-erlang-complete
+        
         ;;elixir
         ruby-end
         alchemist
-        ob-elixir
         flycheck-mix
 
         
@@ -57,6 +66,8 @@
         
         json
         flycheck
+        flycheck-popup-tip
+        popup
         
         sql
         sql-indent
