@@ -19,6 +19,7 @@
     (if (not (get-buffer "*edts[0]*"))  (edts-shell))
     (switch-to-buffer-other-window  "*edts[0]*"))
 
+  
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   :config
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -70,19 +71,28 @@
 
   (defun bindings ()
     (local-set-key (kbd "C-c TAB") #'auto-complete)
-    (local-set-key (kbd "C-c M-r") #'erlang/open-shell))
+    (local-set-key (kbd "C-c M-r") #'erlang/open-shell)
+    (local-set-key (kbd "C-c C-c") #'makefile-compile)
+    (local-set-key (kbd "C-c C-t") #'makefile-test))
 
-   
+
+  (defun setup-erlang-flycheck ()
+    (setq-local flycheck-display-errors-function nil)
+    (setq-local flycheck-erlang-include-path '("../include" ))
+    (setq-local flycheck-erlang-library-path '("../src" "../test"))
+    (setq-local flycheck-check-syntax-automatically '(save))
+    (flycheck-mode 1)
+    (flycheck-popup-tip-mode 1))
+  
   (defun erlang-mode-conf ()
     (auto-complete-mode 1)
     (rainbow-delimiters-mode 1)
     (rainbow-identifiers-mode 1)
-    (flycheck-mode 1)
-    (flycheck-popup-tip-mode 1)
+    (setup-erlang-flycheck)
     (indent-guide-mode 1)
     (smartparens-strict-mode 1)
     (edts-mode 1)
-    (setq indent-tabs-mode nil)
+    (setq-local indent-tabs-mode nil)
     (bindings))
   
   (defun erlang-shell-mode-conf ()
@@ -105,14 +115,4 @@
   :init
   (setq edts-inhibit-package-check t
         edts-man-root "~/.emacs.d/edts/doc/18.2.1")
-  :ensure t)
-
-(use-package flycheck
-  :diminish flycheck-mode
-  :config
-  (add-hook 'after-init-hook 'global-flycheck-mode)
-  (setq flycheck-display-errors-function nil
-        flycheck-erlang-include-path '("../include")
-        flycheck-erlang-library-path '()
-        flycheck-check-syntax-automatically '(save))
   :ensure t)

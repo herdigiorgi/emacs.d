@@ -61,6 +61,7 @@
 
 (global-set-key (kbd "<f12>") 'neotree-toggle)
 (global-set-key (kbd "<f3>") 'centered-window-mode)
+(global-set-key (kbd "<f1>") 'linum-mode)
 
 
 ;;

@@ -48,11 +48,22 @@
 			if (equal d root)
 			return nil))))
 
-(defun set-closest-makefile ()
+(defun set-closest-makefile (command)
   (let* ((makefile-path (get-closest-pathname))
-         (makefile-dir (file-name-directory makefile-path)))
+         (makefile-dir (file-name-directory makefile-path))
+         (command (or command "")))
     (set (make-local-variable 'compile-command)
-         (format "cd %s && make -f %s" makefile-dir makefile-path))))
+         (format "cd %s && make -f %s %s" makefile-dir makefile-path command))))
+
+(defun makefile-compile ()
+  (interactive)
+  (set-closest-makefile "compile")
+  (compile compile-command))
+
+(defun makefile-test ()
+  (interactive)
+  (set-closest-makefile "test")
+  (compile compile-command))
 
 ;; Compile
 (require 'ansi-color)

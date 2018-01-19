@@ -22,6 +22,8 @@
         rainbow-delimiters
         rainbow-identifiers
         highlight-symbol
+        all-the-icons ;; then all-the-icons-install-fonts
+        centered-window-mode
         
         dash
         projectile
