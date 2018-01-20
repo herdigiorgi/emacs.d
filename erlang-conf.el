@@ -6,6 +6,7 @@
   (add-to-list 'auto-mode-alist '("rebar\\.config$" . erlang-mode))
   (add-to-list 'auto-mode-alist '("relx\\.config$" . erlang-mode))
   (add-to-list 'auto-mode-alist '("system\\.config$" . erlang-mode))
+  (add-to-list 'auto-mode-alist '("rebar\\.lock$" . erlang-mode))
   (add-to-list 'auto-mode-alist '("\\.app\\.src$" . erlang-mode))
   (add-to-list 'auto-mode-alist '("\\.erl?$" . erlang-mode))
   (add-to-list 'auto-mode-alist '("\\.hrl?$" . erlang-mode))
@@ -18,7 +19,6 @@
     (interactive)
     (if (not (get-buffer "*edts[0]*"))  (edts-shell))
     (switch-to-buffer-other-window  "*edts[0]*"))
-
   
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   :config
@@ -73,7 +73,8 @@
     (local-set-key (kbd "C-c TAB") #'auto-complete)
     (local-set-key (kbd "C-c M-r") #'erlang/open-shell)
     (local-set-key (kbd "C-c C-c") #'makefile-compile)
-    (local-set-key (kbd "C-c C-t") #'makefile-test))
+    (local-set-key (kbd "C-c C-t") #'makefile-test)
+    (local-set-key (kbd "C-c d") #'edts-show-doc-under-point))
 
 
   (defun setup-erlang-flycheck ()
@@ -105,14 +106,26 @@
   
 
   
-   :mode
-   ("\\.erl\\'" . erlang-mode)
-   ("\\.hrl\\'" . erlang-mode)
-   :ensure t)
+  :mode
+  ("\\.erl\\'" . erlang-mode)
+  ("\\.hrl\\'" . erlang-mode)
+  :ensure t)
 
 
 (use-package edts
   :init
+  ;; wget -c http://erlang.org/download/otp_doc_man_20.2.tar.gz
+  ;; mkdir -p ~/.emacs.d/edts/doc/20.2
+  ;; tar xzf otp_doc_man_20.2.tar.gz -C  ~/.emacs.d/edts/doc/20.2
   (setq edts-inhibit-package-check t
-        edts-man-root "~/.emacs.d/edts/doc/18.2.1")
+        edts-man-root "~/.emacs.d/edts/doc/20.2")
+  :config
+  (defun edts-show-tooltip (x) (popup-tip x))
+  :ensure t)
+
+(use-package neotree
+  :config
+  (require 'neotree)
+  (mapcar (lambda (x) (add-to-list 'neo-hidden-regexp-list x))
+          '("\\.beam$"))
   :ensure t)
