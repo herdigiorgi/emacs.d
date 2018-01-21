@@ -23,6 +23,7 @@
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   :config
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (setq erlang-electric-commands '(erlang-electric-comma erlang-electric-semicolon))
 
   (setq flycheck-erlang-include-path '("../include" "../deps"))
 
@@ -71,6 +72,7 @@
 
   (defun bindings ()
     (local-set-key (kbd "C-c TAB") #'auto-complete)
+    (local-set-key (kbd "C-c SPC") #'ac-complete-with-helm)
     (local-set-key (kbd "C-c M-r") #'erlang/open-shell)
     (local-set-key (kbd "C-c C-c") #'makefile-compile)
     (local-set-key (kbd "C-c C-t") #'makefile-test)
@@ -120,7 +122,8 @@
   (setq edts-inhibit-package-check t
         edts-man-root "~/.emacs.d/edts/doc/20.2")
   :config
-  (defun edts-show-tooltip (x) (popup-tip x))
+  (defun edts-show-tooltip (x)
+    (if x (popup-tip x)  (message "can't find doc")))
   :ensure t)
 
 (use-package neotree
