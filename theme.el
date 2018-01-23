@@ -1,4 +1,4 @@
-(load-theme 'dracula t)
+(load-theme 'leuven t)
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 (set-default-font "Fira Code" nil t)
@@ -8,7 +8,7 @@
 (global-hl-line-mode 0)
 (set-face-attribute 'default nil :height 100 :weight 'regular)
 (setq ring-bell-function 'ignore)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-fixed-size nil)
 (setq neo-smart-open t)
 
