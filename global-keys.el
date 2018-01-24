@@ -4,6 +4,12 @@
 (defun my-insert-tilde () (interactive) (my-insert-after-point "~"))
 (defun my-interpunct () (interactive) (my-insert-after-point "·"))
 (defun my-back-slash () (interactive) (my-insert-after-point "\\"))
+(defun my-show-more-visual ()
+  (interactive)
+  (let* ((activated (bound-and-true-p linum-mode))
+         (toggle (or (and activated 0) 1)))
+    (linum-mode toggle)
+    (whitespace-mode toggle)))
 
 (global-set-key (kbd "C-$") 'my-insert-tilde)
 (global-set-key (kbd "C-t") 'my-insert-grave-accent)
@@ -61,7 +67,7 @@
 
 (global-set-key (kbd "<f12>") 'neotree-toggle)
 (global-set-key (kbd "<f3>") 'centered-window-mode)
-(global-set-key (kbd "<f1>") 'linum-mode)
+(global-set-key (kbd "<f1>") 'my-show-more-visual)
 
 
 ;;
