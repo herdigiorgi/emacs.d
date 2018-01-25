@@ -78,7 +78,6 @@
     (local-set-key (kbd "C-c C-t") #'makefile-test)
     (local-set-key (kbd "C-c d") #'edts-show-doc-under-point))
 
-
   (defun setup-erlang-flycheck ()
     (setq-local flycheck-display-errors-function nil)
     (setq-local flycheck-erlang-include-path '("../include" ))
@@ -94,7 +93,6 @@
     (setup-erlang-flycheck)
     (indent-guide-mode 1)
     (smartparens-strict-mode 1)
-    (edts-mode 1)
     (setq-local indent-tabs-mode nil)
     (bindings))
   
