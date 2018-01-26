@@ -76,7 +76,9 @@
     (local-set-key (kbd "C-c M-r") #'erlang/open-shell)
     (local-set-key (kbd "C-c C-c") #'makefile-compile)
     (local-set-key (kbd "C-c C-t") #'makefile-test)
-    (local-set-key (kbd "C-c d") #'edts-show-doc-under-point))
+    (local-set-key (kbd "C-c d")   #'edts-show-doc-under-point)
+    (local-set-key (kbd "C-c e")   #'edts-mode)
+    (local-set-key (kbd "M-e")     #'end-of-line))
 
   (defun setup-erlang-flycheck ()
     (setq-local flycheck-display-errors-function nil)
