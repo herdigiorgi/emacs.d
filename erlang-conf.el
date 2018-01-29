@@ -24,6 +24,8 @@
   :config
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (setq erlang-electric-commands '(erlang-electric-comma erlang-electric-semicolon))
+  
+  (setq erlang-indent-level 2)
 
   (setq flycheck-erlang-include-path '("../include" "../deps"))
 
