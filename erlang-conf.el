@@ -88,8 +88,6 @@
   
   (defun erlang-mode-conf ()
     (auto-complete-mode 1)
-    (rainbow-delimiters-mode 1)
-    (rainbow-identifiers-mode 1)
     (setup-erlang-flycheck)
     (indent-guide-mode 1)
     (smartparens-strict-mode 1)

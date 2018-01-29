@@ -9,6 +9,7 @@
   (let* ((activated (bound-and-true-p linum-mode))
          (toggle (or (and activated 0) 1)))
     (linum-mode toggle)
+    (fci-mode toggle)
     (whitespace-mode toggle)))
 
 (global-set-key (kbd "C-$") 'my-insert-tilde)

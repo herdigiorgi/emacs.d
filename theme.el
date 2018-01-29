@@ -6,12 +6,14 @@
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)
-(set-face-attribute 'default nil :height 100 :weight 'regular)
+(set-face-attribute 'default nil :height 105 :weight 'regular)
 (setq ring-bell-function 'ignore)
 ;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-fixed-size nil)
 (setq neo-smart-open t)
 
+(setq fci-rule-width 1)
+(setq fci-rule-color "#DDDDDD")
 
 ; Remove any bars... only text
 (scroll-bar-mode -1)

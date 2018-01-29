@@ -25,6 +25,7 @@
         all-the-icons ;; then all-the-icons-install-fonts
         centered-window-mode
         default-text-scale
+        fill-column-indicator
         
         dash
         projectile
