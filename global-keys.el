@@ -30,7 +30,6 @@
 (global-set-key (kbd "C-c v") 'highlight-symbol)
 (global-set-key (kbd "C-+") 'default-text-scale-increase)
 (global-set-key (kbd "C--") 'default-text-scale-decrease)
-(global-set-key [escape] 'keyboard-escape-quit)
 
 (global-set-key (kbd "C-c h t")   #'vimish-fold-toggle-all)
 (global-set-key (kbd "C-c h h a") #'vimish-fold-refold-all)
