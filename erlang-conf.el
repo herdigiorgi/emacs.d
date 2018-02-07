@@ -13,20 +13,22 @@
 
   (add-hook 'after-init-hook 'erlang/after-init-hook)
   (defun erlang/after-init-hook ()
-    (require 'edts-start))
+    ;(require 'edts-start)
+    )
 
   (defun erlang/open-shell ()
     (interactive)
-    (if (not (get-buffer "*edts[0]*"))  (edts-shell))
-    (switch-to-buffer-other-window  "*edts[0]*"))
+    (erlang-shell))
   
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   :config
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   (setq erlang-electric-commands '(erlang-electric-comma erlang-electric-semicolon))
-  
   (setq erlang-indent-level 2)
-
+  (setq inferior-erlang-machine "rebar3")
+  (setq inferior-erlang-machine-options '("shell"))
+  (setq inferior-erlang-shell-type nil)
+  
   (setq flycheck-erlang-include-path '("../include" "../deps"))
 
   (require 'ivy-erlang-complete)

@@ -10,3 +10,10 @@
 
   (add-hook 'conf-space-mode-hook #'conf-mode/hook)
 )
+
+(use-package dockerfile-mode
+  :config
+  (defun dockerfile-mode/hook ()
+    (electric-indent-mode 0))
+
+  (add-hook 'dockerfile-mode/hook #'dockerfile-mode/hook))

@@ -23,7 +23,6 @@
         rainbow-identifiers
         highlight-symbol
         all-the-icons ;; then all-the-icons-install-fonts
-        centered-window-mode
         default-text-scale
         fill-column-indicator
         
@@ -77,11 +76,12 @@
         sql-indent
         emacsql-psql
 
-        highlight-chars
         yascroll
         
         js3-mode
         tern
+
+        dockerfile-mode
 
         smartparens))
 

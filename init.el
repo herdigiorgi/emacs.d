@@ -11,6 +11,7 @@
 (load.d "extras")
 (load.d "auto-complete-conf")
 
+(load.d "conf-conf")
 (load.d "lisp")
 (load.d "erlang-conf")
 (load.d "clojure-conf")
@@ -21,5 +22,4 @@
 (load.d "yaml-conf")
 (load.d "html-conf")
 (load.d "markdown-conf")
-(load.d "conf-conf")
 

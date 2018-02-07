@@ -6,7 +6,7 @@
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)
-(set-face-attribute 'default nil :height 105 :weight 'regular)
+(set-face-attribute 'default nil :height 85 :weight 'regular)
 (setq ring-bell-function 'ignore)
 ;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-fixed-size nil)
@@ -29,3 +29,23 @@
 ;; SCROLL
 (yascroll-bar-mode 1)
 
+;; whitespace
+(require 'whitespace)
+(delete 'lines whitespace-style)
+(delete 'empty whitespace-style)
+(defun show-visuals (activate)
+  (linum-mode activate)
+  (fci-mode activate)
+  (flyspell-mode activate)
+  (whitespace-mode activate))
+(defun is-show-visuals ()
+  (bound-and-true-p linum-mode))
+(defun toggle-show-visual ()
+  (interactive)
+  (let* ((activated (is-show-visuals))
+         (toggle (or (and activated 0) 1)))
+    (show-visuals toggle)))
+
+
+
+(add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
