@@ -32,9 +32,16 @@
 (defun elixir:compile ()
   (interactive)
   (let* ((root (file-name-directory (get-closest-pathname "mix.exs")))
-         (mix-cmd "mix do compile --warnings-as-errors, dialyzer")
+         (mix-cmd "mix do compile")
          (cmd (format "cd %s && %s" root mix-cmd)))
     (compile cmd)))
+
+(defun elixir:run-in-repl (command)
+  (alchemist-iex--send-command (alchemist-iex-process) command))
+
+(defun elixir:reload ()
+  (interactive)
+  (elixir:run-in-repl "IEx.Helpers.recompile"))
 
 (defun elixir:iex:key (map func)
   (define-key alchemist-iex-mode-map (kbd map) func))
@@ -52,6 +59,7 @@
   (elixir:key "C-c d" 'alchemist-help-search-at-point)
   (elixir:key "C-c SPC" 'helm-company)
   (elixir:key "C-c C-c" 'elixir:compile)
+  (elixir:key "C-c C-r" 'elixir:reload)
   (elixir:key "C-x C-e" 'alchemist-iex-send-last-sexp)
   (elixir:key "C-c C-z" 'elixir:go-to-iex-buffer)
   (elixir:key "C-c C-t t" 'alchemist-mix-test-at-point)
