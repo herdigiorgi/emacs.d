@@ -5,6 +5,10 @@
 (defun my-interpunct () (interactive) (my-insert-after-point "·"))
 (defun my-back-slash () (interactive) (my-insert-after-point "\\"))
 
+
+(global-set-key (kbd "C-s") 'helm-do-ag-this-file)
+(global-set-key (kbd "C-c s") 'helm-do-ag)
+
 (global-set-key (kbd "C-$") 'my-insert-tilde)
 (global-set-key (kbd "C-t") 'my-insert-grave-accent)
 (global-set-key (kbd "C-#") 'my-interpunct)
@@ -24,13 +28,8 @@
 (global-set-key (kbd "C-+") 'default-text-scale-increase)
 (global-set-key (kbd "C--") 'default-text-scale-decrease)
 
-(global-set-key (kbd "C-c h t")   #'vimish-fold-toggle-all)
-(global-set-key (kbd "C-c h h a") #'vimish-fold-refold-all)
-(global-set-key (kbd "C-c h s a") #'vimish-fold-unfold-all)
-(global-set-key (kbd "C-c h s b") #'vimish-fold-unfold)
-(global-set-key (kbd "C-c h h b") #'vimish-fold)
-(global-set-key (kbd "C-c h d b") #'vimish-fold-delete)
-(global-set-key (kbd "C-c h d a") #'vimish-fold-delete-all)
+(global-set-key (kbd "C-c h a")   #'origami-toggle-all-nodes)
+(global-set-key (kbd "C-c h b") #'origami-recursively-toggle-node)
 
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g m") 'smerge-keep-mine)

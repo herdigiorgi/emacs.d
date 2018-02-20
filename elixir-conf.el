@@ -83,6 +83,7 @@
   (auto-complete-mode 0)
   (company-mode 1)
   (smartparens-mode 1)
+  (flycheck-mode 1)
   ;(turn-on-smartparens-strict-mode)
   ;(rainbow-delimiters-mode 1)
   ;(flycheck-mode 0) ;; not geting it work for the moment

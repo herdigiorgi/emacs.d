@@ -15,7 +15,10 @@
         ac-slime
         ac-helm
         fill-column-indicator
-        
+        origami
+        hide-lines
+        helm-ag
+
         monokai-theme
         dracula-theme
         neotree
