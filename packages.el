@@ -28,7 +28,8 @@
         all-the-icons ;; then all-the-icons-install-fonts
         default-text-scale
         fill-column-indicator
-        
+        centered-window
+
         dash
         projectile
         helm

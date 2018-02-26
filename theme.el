@@ -1,4 +1,4 @@
-(load-theme 'leuven t)
+(load-theme 'monokai t)
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 (set-default-font "Fira Code" nil t)
@@ -33,6 +33,7 @@
 (require 'whitespace)
 (delete 'lines whitespace-style)
 (delete 'empty whitespace-style)
+(delete 'spaces whitespace-style)
 (defun show-visuals (activate)
   (linum-mode activate)
   (fci-mode activate)
@@ -48,4 +49,5 @@
 
 
 
-(add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
+;(add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
+

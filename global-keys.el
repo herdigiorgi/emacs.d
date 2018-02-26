@@ -6,8 +6,9 @@
 (defun my-back-slash () (interactive) (my-insert-after-point "\\"))
 
 
-(global-set-key (kbd "C-s") 'helm-do-ag-this-file)
-(global-set-key (kbd "C-c s") 'helm-do-ag)
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-c s f") 'helm-do-ag-this-file)
+(global-set-key (kbd "C-c s d") 'helm-do-ag)
 
 (global-set-key (kbd "C-$") 'my-insert-tilde)
 (global-set-key (kbd "C-t") 'my-insert-grave-accent)
@@ -64,7 +65,7 @@
 
 (global-set-key (kbd "C-0") 'neotree-toggle)
 (global-set-key (kbd "C-1") 'toggle-show-visual)
-
+(global-set-key (kbd "<f1>") 'centered-window-mode)
 
 ;;
 ;; Smartparens
