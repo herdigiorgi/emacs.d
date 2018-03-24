@@ -1,9 +1,4 @@
-(load-theme 'abyss t)
-(set-face-background 'mode-line "#222222")
-(set-face-foreground 'mode-line "white")
-(set-face-background 'mode-line-inactive "#222222")
-(set-face-foreground 'mode-line-inactive "grey")
-
+(load-theme 'leuven t)
 
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
