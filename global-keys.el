@@ -7,8 +7,10 @@
 
 
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c s f") 'helm-do-ag-this-file)
 (global-set-key (kbd "C-c s d") 'helm-do-ag)
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 (global-set-key (kbd "C-$") 'my-insert-tilde)
 (global-set-key (kbd "C-t") 'my-insert-grave-accent)
@@ -51,7 +53,7 @@
 (global-set-key (kbd "C-M-q") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
 
-(global-set-key [f2]  'recentf-open-files)
+(global-set-key [f2]  'helm-recentf)
 
 (global-set-key (kbd "<C-f1>") 'visual-line-mode)
 (global-set-key (kbd "<C-f2>") 'linum-mode)
@@ -59,7 +61,7 @@
 
 (global-set-key (kbd "C-c p p") #'helm-projectile-switch-project)
 (global-set-key (kbd "C-c p f") #'helm-projectile-find-file)
-(global-set-key (kbd "C-x C-b") #'helm-buffers-list)
+(global-set-key (kbd "C-x C-b") #'helm-mini)
 
 (global-set-key (kbd "C-c s c d") 'sql-connect-default)
 

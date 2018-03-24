@@ -19,8 +19,8 @@
         hide-lines
         helm-ag
 
-        monokai-theme
-        dracula-theme
+        abyss-theme
+        
         neotree
         rainbow-delimiters
         rainbow-identifiers

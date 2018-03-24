@@ -13,6 +13,11 @@
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-part-face t)
 (setq web-mode-enable-comment-keywords t)
+(add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+(add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
+(add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+(add-to-list 'web-mode-indentation-params '("lineup-ternary" . nil))
+(setq web-mode-enable-auto-indentation nil)
 
 ;;
 ;; JS

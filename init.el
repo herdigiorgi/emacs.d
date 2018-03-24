@@ -7,6 +7,7 @@
 (defun load.d (name)(load (concat "~/.emacs.d/" name ".el")))
 (load.d "global-keys")
 (load.d "packages")
+(load.d "helm-conf")
 (load.d "theme")
 (load.d "extras")
 (load.d "auto-complete-conf")

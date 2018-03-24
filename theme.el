@@ -1,4 +1,10 @@
-(load-theme 'monokai t)
+(load-theme 'abyss t)
+(set-face-background 'mode-line "#222222")
+(set-face-foreground 'mode-line "white")
+(set-face-background 'mode-line-inactive "#222222")
+(set-face-foreground 'mode-line-inactive "grey")
+
+
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 (set-default-font "Fira Code" nil t)

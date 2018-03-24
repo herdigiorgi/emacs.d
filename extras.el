@@ -26,6 +26,9 @@
 ;smatparens
 (require 'smartparens-config)
 
+;;origami
+(add-hook 'prog-mode-hook (lambda () (origami-mode 1)))
+
 ;yas
 (require 'yasnippet)
 (yas-reload-all)
