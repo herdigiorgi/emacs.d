@@ -1,3 +1,28 @@
+(defun workspace:insert-greeting ()
+  (insert
+   "We generate fears while we sit. We overcome them by action.\n\n"
+
+   "Security is mostly a superstition. Life is either a daring adventure or nothing.\n\n"
+
+   "Whether you think you can or think you can’t, you’re right.\n\n"
+
+   "You learn more from failure than from success. Don’t let it stop you. Failure builds character.\n\n"
+
+   "It’s not whether you get knocked down, it’s whether you get up.\n\n"
+   
+   "People who are crazy enough to think they can change the world, are the ones who do.\n\n"
+
+   "Entrepreneurs are great at dealing with uncertainty and also very good at minimizing risk.\n"
+   "That’s the classic entrepreneur.\n\n"
+
+   "Knowing is not enough; we must apply. Wishing is not enough; we must do.\n\n"
+
+   "Imagine your life is perfect in every respect; what would it look like?\n\n"
+
+   "The critical ingredient is getting off your butt and doing something. It's as simple as that.\n"
+   "A lot of people have ideas, but there are few who decide to do something about them now.\n"
+   "Not tomorrow. Not next week. But today. The true entrepreneur is a doer, not a dreamer.\n\n"))
+
 (use-package perspeen
   :ensure t
 
@@ -42,15 +67,6 @@
   (perspeen-goto-ws 1)
   (let ((new-buffer (new-empty-buffer)))
     (switch-to-buffer new-buffer)
-    (markdown-mode)
-    (insert
-     "# We generate fears while we sit. We overcome them by action.\n"
-     "# Security is mostly a superstition. Life is either a daring adventure or nothing.\n"
-     "# Whether you think you can or think you can’t, you’re right.\n"
-     "# You learn more from failure than from success. Don’t let it stop you. Failure builds character.\n"
-     "# It’s not whether you get knocked down, it’s whether you get up.\n"
-     "# People who are crazy enough to think they can change the world, are the ones who do.\n"
-     "# Entrepreneurs are great at dealing with uncertainty and also very good at minimizing risk. That’s the classic entrepreneur.\n"
-     "# Knowing is not enough; we must apply. Wishing is not enough; we must do.\n"
-     "# Imagine your life is perfect in every respect; what would it look like?\n")
+    (text-mode)
+    (workspace:insert-greeting)
     (set-buffer-modified-p nil)))

@@ -5,6 +5,7 @@
 (defun my-interpunct () (interactive) (my-insert-after-point "·"))
 (defun my-back-slash () (interactive) (my-insert-after-point "\\"))
 
+(global-set-key (kbd "C-U") 'undo)
 
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
