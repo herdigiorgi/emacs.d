@@ -8,6 +8,7 @@
 (load.d "global-keys")
 (load.d "packages")
 (load.d "helm-conf")
+(load.d "workspaces-conf")
 (load.d "theme")
 (load.d "extras")
 (load.d "auto-complete-conf")

@@ -30,6 +30,7 @@
         fill-column-indicator
         centered-window
 
+        perspeen
         dash
         projectile
         helm

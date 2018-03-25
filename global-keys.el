@@ -43,6 +43,16 @@
 (global-set-key (kbd "C-M-p") (kbd "]"))
 (global-set-key (kbd "M-8") (kbd "{"))
 (global-set-key (kbd "M-9") (kbd "}"))
+(global-set-key (kbd "M-1") 'goto-workspace-1)
+(global-set-key (kbd "M-2") 'goto-workspace-2)
+(global-set-key (kbd "M-3") 'goto-workspace-3)
+(global-set-key (kbd "M-4") 'goto-workspace-4)
+(global-set-key (kbd "M-5") 'goto-workspace-5)
+(global-set-key (kbd "M-6") 'goto-workspace-6)
+(global-set-key (kbd "M-7") 'goto-workspace-7)
+(global-set-key (kbd "M-8") 'goto-workspace-8)
+(global-set-key (kbd "M-9") 'goto-workspace-9)
+(global-set-key (kbd "M-0") 'goto-workspace-10)
 
 ;When you have an active region that spans multiple lines,
 ;the following will add a cursor to each line:
