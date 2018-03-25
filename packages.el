@@ -38,6 +38,7 @@
         paredit
         hideshow
         vimish-fold
+        smart-mode-line
         
         multiple-cursors
         indent-guide

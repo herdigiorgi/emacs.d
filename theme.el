@@ -1,3 +1,9 @@
+;; modeline
+(setq sml/theme 'light
+      sml/no-confirm-load-theme t)
+(sml/setup)
+
+;; color theme
 (load-theme 'leuven t)
 
 (set-language-environment "UTF-8")
@@ -48,7 +54,4 @@
          (toggle (or (and activated 0) 1)))
     (show-visuals toggle)))
 
-
-
 ;(add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
-

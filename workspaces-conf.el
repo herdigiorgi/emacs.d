@@ -6,20 +6,7 @@
   ;; overriding internal function - hack
   (defun perspeen-update-mode-string ()
   "Update `perspeen-modestring' when `perspeen-ws-list' is changed."
-  (let* ((index 1)
-	 (ws-name-list
-	  (mapcar (lambda (ws)
-		    (let* ((name (or (perspeen-ws-struct-name ws) "nil"))
-			  (label (format "%d" index name)))
-		      (setq index (1+ index))
-		      (if (eq ws perspeen-current-ws)
-			  (propertize label 'face 'perspeen-selected-face)
-			(propertize label 'mouse-face 'mode-line-highlight))))
-		  perspeen-ws-list)))
-    (setq perspeen-modestring
-	  (append (list (nth 0 perspeen-modestring-dividers)
-			(mapconcat 'identity ws-name-list (nth 2 perspeen-modestring-dividers))
-			(nth 1 perspeen-modestring-dividers))))))
+  (setq perspeen-modestring nil))
 
   ;; new emtpy buffer
   (defun new-empty-buffer ()
@@ -65,4 +52,5 @@
      "# People who are crazy enough to think they can change the world, are the ones who do.\n"
      "# Entrepreneurs are great at dealing with uncertainty and also very good at minimizing risk. That’s the classic entrepreneur.\n"
      "# Knowing is not enough; we must apply. Wishing is not enough; we must do.\n"
-     "# Imagine your life is perfect in every respect; what would it look like?\n")))
+     "# Imagine your life is perfect in every respect; what would it look like?\n")
+    (set-buffer-modified-p nil)))
