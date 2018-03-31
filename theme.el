@@ -40,7 +40,6 @@
 (require 'whitespace)
 (delete 'lines whitespace-style)
 (delete 'empty whitespace-style)
-(delete 'spaces whitespace-style)
 (defun show-visuals (activate)
   (linum-mode activate)
   (fci-mode activate)
@@ -54,4 +53,7 @@
          (toggle (or (and activated 0) 1)))
     (show-visuals toggle)))
 
-;(add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
+(add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
+
+(custom-set-faces
+ '(whitespace-space ((t (:background nil :foreground "#DDDDDD")))))

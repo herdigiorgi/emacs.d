@@ -28,7 +28,6 @@
         all-the-icons ;; then all-the-icons-install-fonts
         default-text-scale
         fill-column-indicator
-        centered-window
 
         perspeen
         dash
@@ -58,32 +57,31 @@
         erlang
         edts
         ivy-erlang-complete
-        
+
         ;;elixir
         ruby-end
         alchemist
         flycheck-mix
 
-        
         ;html
         web-mode
         tagedit
-        
+
         yaml-mode
         flymake-jslint
         markdown-mode+
-        
+
         json
         flycheck
         flycheck-popup-tip
         popup
-        
+
         sql
         sql-indent
         emacsql-psql
 
         yascroll
-        
+
         js3-mode
         tern
 

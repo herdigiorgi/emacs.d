@@ -5,8 +5,6 @@
 (defun my-interpunct () (interactive) (my-insert-after-point "·"))
 (defun my-back-slash () (interactive) (my-insert-after-point "\\"))
 
-(global-set-key (kbd "C-U") 'undo)
-
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c s f") 'helm-do-ag-this-file)
@@ -32,7 +30,7 @@
 (global-set-key (kbd "C-+") 'default-text-scale-increase)
 (global-set-key (kbd "C--") 'default-text-scale-decrease)
 
-(global-set-key (kbd "C-c h a")   #'origami-toggle-all-nodes)
+(global-set-key (kbd "C-c h a") #'origami-toggle-all-nodes)
 (global-set-key (kbd "C-c h b") #'origami-recursively-toggle-node)
 
 (global-set-key (kbd "C-c g s") 'magit-status)
@@ -64,21 +62,14 @@
 (global-set-key (kbd "C-M-q") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
 
-(global-set-key [f2]  'helm-recentf)
-
-(global-set-key (kbd "<C-f1>") 'visual-line-mode)
-(global-set-key (kbd "<C-f2>") 'linum-mode)
-(global-set-key (kbd "C-c M-l") 'slime)
-
 (global-set-key (kbd "C-c p p") #'helm-projectile-switch-project)
 (global-set-key (kbd "C-c p f") #'helm-projectile-find-file)
 (global-set-key (kbd "C-x C-b") #'helm-mini)
 
-(global-set-key (kbd "C-c s c d") 'sql-connect-default)
+(global-set-key (kbd "<f12>") 'neotree-toggle)
+(global-set-key (kbd "<f1>") 'toggle-show-visual)
 
-(global-set-key (kbd "C-0") 'neotree-toggle)
-(global-set-key (kbd "C-1") 'toggle-show-visual)
-(global-set-key (kbd "<f1>") 'centered-window-mode)
+(global-set-key (kbd "C-c f s") 'flyspell-check-previous-highlighted-word)
 
 ;;
 ;; Smartparens
@@ -96,13 +87,13 @@
      (define-key smartparens-mode-map (kbd "C-M-e") 'sp-up-sexp)
      (define-key smartparens-mode-map (kbd "C-M-u") 'sp-backward-up-sexp)
      (define-key smartparens-mode-map (kbd "C-M-t") 'sp-transpose-sexp)
-     
+
      (define-key smartparens-mode-map (kbd "C-M-n") 'sp-next-sexp)
      (define-key smartparens-mode-map (kbd "C-M-p") 'sp-previous-sexp)
-     
+
      (define-key smartparens-mode-map (kbd "C-M-k") 'sp-kill-sexp)
      (define-key smartparens-mode-map (kbd "C-M-c") 'sp-copy-sexp)
-     
+
      (define-key smartparens-mode-map (kbd "M-<delete>") 'sp-unwrap-sexp)
      (define-key smartparens-mode-map (kbd "M-<backspace>") 'sp-backward-unwrap-sexp)
 
@@ -110,7 +101,7 @@
      (define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
      (define-key smartparens-mode-map (kbd "C-M-<left>") 'sp-backward-slurp-sexp)
      (define-key smartparens-mode-map (kbd "C-M-<right>") 'sp-backward-barf-sexp)
-     
+
      (define-key smartparens-mode-map (kbd "M-D") 'sp-splice-sexp)
      (define-key smartparens-mode-map (kbd "C-M-<delete>")
        'sp-splice-sexp-killing-forward)
@@ -123,6 +114,6 @@
      (define-key smartparens-mode-map (kbd "C-<left_bracket>")
        'sp-select-previous-thing)
      (define-key smartparens-mode-map (kbd "C-M-]") 'sp-select-next-thing)
-     
+
      (define-key smartparens-mode-map (kbd "M-F") 'sp-forward-symbol)
      (define-key smartparens-mode-map (kbd "M-B") 'sp-backward-symbol)))
