@@ -45,7 +45,7 @@
         highlight-parentheses
         hl-sexp
         rainbow-blocks
-        
+
         clojure-mode
         cider
         ac-cider
