@@ -18,9 +18,9 @@
         origami
         hide-lines
         helm-ag
-
+        fish-mode
+        expand-region
         abyss-theme
-        
         neotree
         rainbow-delimiters
         rainbow-identifiers
@@ -57,6 +57,7 @@
         erlang
         edts
         ivy-erlang-complete
+        flycheck-rebar3
 
         ;;elixir
         ruby-end

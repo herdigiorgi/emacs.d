@@ -2,6 +2,8 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
+;; Path
+(setq exec-path (append exec-path '("/usr/texbin" "/usr/local/bin")))
 
 (put 'erase-buffer 'disabled nil)
 (setq inhibit-startup-screen t)
@@ -12,6 +14,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 (ido-mode 1)
+
+;; revert
+(global-auto-revert-mode t)
 
 ;recentf
 (recentf-mode)

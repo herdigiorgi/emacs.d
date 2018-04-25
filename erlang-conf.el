@@ -89,8 +89,9 @@
     (setq-local flycheck-erlang-include-path '("../include" ))
     (setq-local flycheck-erlang-library-path '("../src" "../test"))
     (setq-local flycheck-check-syntax-automatically '(save))
-    (flycheck-mode 1)
-    (flycheck-popup-tip-mode 1))
+    ;(flycheck-mode 1)
+    ;(flycheck-popup-tip-mode 1)
+    )
   
   (defun erlang-mode-conf ()
     (auto-complete-mode 1)
