@@ -89,28 +89,37 @@
     (setq-local flycheck-erlang-include-path '("../include" ))
     (setq-local flycheck-erlang-library-path '("../src" "../test"))
     (setq-local flycheck-check-syntax-automatically '(save))
-    ;(flycheck-mode 1)
-    ;(flycheck-popup-tip-mode 1)
-    )
-  
+    (setq erlang-root-dir "~/.kerl/19.3/")
+    (flycheck-rebar3-setup)
+    (flycheck-mode 1)
+    (flycheck-popup-tip-mode 1))
+
+  (defun setup-erlang-flymake ()
+     (setq-local load-path (cons  "~/.kerl/19.3/lib/tools-2.9.1/emacs/"
+                         load-path))
+     (setq-local erlang-root-dir "~/.kerl/19.3/")
+     (setq-local exec-path (cons "~/.kerl/19.3/bin" exec-path))
+     (require 'erlang-start)
+     (require 'erlang-flymake)
+     (flymake-mode-on)
+     (flymake-cursor-mode 1))
+
   (defun erlang-mode-conf ()
     (auto-complete-mode 1)
-    (setup-erlang-flycheck)
     (indent-guide-mode 1)
     (smartparens-strict-mode 1)
     (setq-local indent-tabs-mode nil)
-    (bindings))
-  
+    (bindings)
+    (setup-erlang-flymake))
+
   (defun erlang-shell-mode-conf ()
     (bindings))
-  
+
   (add-hook 'erlang-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
   (add-hook 'erlang-mode-hook #'erlang-mode-conf)
   (add-hook 'erlang-shell-mode-hook #'erlang-shell-mode-conf)
   (add-hook 'edts-shell-mode-hook #'erlang-shell-mode-conf)
-  
 
-  
   :mode
   ("\\.erl\\'" . erlang-mode)
   ("\\.hrl\\'" . erlang-mode)

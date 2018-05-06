@@ -69,6 +69,8 @@
         tagedit
 
         yaml-mode
+        flymake
+        flymake-cursor
         flymake-jslint
         markdown-mode+
 
