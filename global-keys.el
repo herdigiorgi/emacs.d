@@ -27,6 +27,7 @@
 (global-set-key (kbd "C-c <C-left>")  'other-frame)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 (global-set-key (kbd "C-c v") 'highlight-symbol)
+(global-set-key (kbd "C-c V") 'bm-toggle)
 (global-set-key (kbd "C-+") 'default-text-scale-increase)
 (global-set-key (kbd "C--") 'default-text-scale-decrease)
 
