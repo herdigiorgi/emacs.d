@@ -44,7 +44,6 @@
         indent-guide
         
         highlight-parentheses
-        hl-sexp
         rainbow-blocks
 
         clojure-mode
