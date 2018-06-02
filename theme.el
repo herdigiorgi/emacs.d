@@ -1,7 +1,18 @@
 ;; modeline
+(size-indication-mode 0)
+(column-number-mode 0)
+(line-number-mode 0)
 (setq sml/theme 'light
-      sml/no-confirm-load-theme t)
+      sml/no-confirm-load-theme t
+      sml/size-indication-mode nil
+      sml/size-indication-format ""
+      sml/line-number-format ""
+      sml/col-number-format ""
+      sml/name-width '(0 20)
+      sml/mode-width '(0 20))
 (sml/setup)
+(which-function-mode 1)
+(setq which-func-unknown "∅")
 
 ;; color theme
 (load-theme 'leuven t)
@@ -56,4 +67,5 @@
 (add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
 
 (custom-set-faces
- '(whitespace-space ((t (:background nil :foreground "#DDDDDD")))))
+ '(whitespace-space ((t (:background nil :foreground "#DDDDDD"))))
+ '(which-func ((t (:foreground "black" :weight normal)))))

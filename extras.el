@@ -92,3 +92,7 @@
     (when filename
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
+
+;; edif
+(custom-set-variables
+ '(ediff-window-setup-function (quote ediff-setup-windows-plain)))
