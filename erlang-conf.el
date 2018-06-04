@@ -94,18 +94,13 @@
     (flycheck-mode 1)
     (flycheck-popup-tip-mode 1))
 
-  (defun mh-simple-get-deps-include-dirs ()
-    (list "../include"))
-
   (defun setup-erlang-flymake ()
      (setq-local load-path (cons  "~/.kerl/19.3/lib/tools-2.9.1/emacs/"
                          load-path))
      (setq-local erlang-root-dir "~/.kerl/19.3/")
      (setq-local exec-path (cons "~/.kerl/19.3/bin" exec-path))
-     (setq-local erlang-flymake-get-include-dirs-function 'mh-simple-get-deps-include-dirs)
      (require 'erlang-start)
      (require 'erlang-flymake)
-     (erlang-flymake-only-on-save)
      (flymake-mode-on)
      (flymake-cursor-mode 1))
 

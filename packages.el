@@ -25,7 +25,6 @@
         rainbow-delimiters
         rainbow-identifiers
         highlight-symbol
-        bm
         all-the-icons ;; then all-the-icons-install-fonts
         default-text-scale
         fill-column-indicator
