@@ -3,13 +3,7 @@
 (column-number-mode 0)
 (line-number-mode 0)
 (setq sml/theme 'light
-      sml/no-confirm-load-theme t
-      sml/size-indication-mode nil
-      sml/size-indication-format ""
-      sml/line-number-format ""
-      sml/col-number-format ""
-      sml/name-width '(0 20)
-      sml/mode-width '(0 20))
+      sml/no-confirm-load-theme t)
 (sml/setup)
 (which-function-mode 1)
 (setq which-func-unknown "∅")

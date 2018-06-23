@@ -38,10 +38,10 @@
         hideshow
         vimish-fold
         smart-mode-line
-        
+
         multiple-cursors
         indent-guide
-        
+
         highlight-parentheses
         rainbow-blocks
 
