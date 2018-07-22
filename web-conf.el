@@ -23,10 +23,4 @@
 ;; JS
 ;;
 
-(setq js-indent-level 2)
-(defun js:mode-hook ()
-  (indent-guide-mode 1)
-  (flymake-jslint-load)
-  (rainbow-delimiters-mode 1))
 
-(add-hook 'js-mode-hook 'js:mode-hook)

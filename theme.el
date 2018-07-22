@@ -18,7 +18,7 @@
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)
-(set-face-attribute 'default nil :height 125 :weight 'regular)
+(set-face-attribute 'default nil :height 120 :weight 'regular)
 (setq ring-bell-function 'ignore)
 ;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-fixed-size nil)
@@ -47,8 +47,6 @@
 (delete 'empty whitespace-style)
 (defun show-visuals (activate)
   (linum-mode activate)
-  (fci-mode activate)
-  (flyspell-mode activate)
   (whitespace-mode activate))
 (defun is-show-visuals ()
   (bound-and-true-p linum-mode))
@@ -61,5 +59,6 @@
 (add-hook 'prog-mode-hook (lambda () (show-visuals 1)))
 
 (custom-set-faces
+ '(default ((t (:foreground "black" :slant normal))))
  '(whitespace-space ((t (:background nil :foreground "#DDDDDD"))))
  '(which-func ((t (:foreground "black" :weight normal)))))

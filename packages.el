@@ -21,6 +21,7 @@
         fish-mode
         expand-region
         abyss-theme
+        intellij-theme
         neotree
         rainbow-delimiters
         rainbow-identifiers
@@ -54,7 +55,6 @@
 
         ;;erlang
         erlang
-        edts
         ivy-erlang-complete
         flycheck-rebar3
 
@@ -84,7 +84,6 @@
 
         yascroll
 
-        js3-mode
         tern
 
         dockerfile-mode
