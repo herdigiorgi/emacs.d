@@ -77,4 +77,5 @@
     (text-mode)
     (workspace:insert-greeting)
     (set-buffer-modified-p nil)
-    (setq buffer-read-only t)))
+    (setq buffer-read-only t))
+  (beginning-of-buffer))

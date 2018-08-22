@@ -18,7 +18,7 @@
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)
-(set-face-attribute 'default nil :height 120 :weight 'regular)
+(set-face-attribute 'default nil :height 110 :weight 'regular)
 (setq ring-bell-function 'ignore)
 ;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-fixed-size nil)
