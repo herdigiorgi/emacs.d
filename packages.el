@@ -88,7 +88,11 @@
 
         dockerfile-mode
 
-        smartparens))
+        smartparens
+
+        fountain-mode
+        olivetti
+        imenu-list))
 
 (defun pkg:install-packages ()
   (package-initialize)
