@@ -96,3 +96,6 @@
 ;; edif
 (custom-set-variables
  '(ediff-window-setup-function (quote ediff-setup-windows-plain)))
+
+;; centered
+(setq cwm-centered-window-width 80)

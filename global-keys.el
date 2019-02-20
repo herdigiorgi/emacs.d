@@ -10,6 +10,7 @@
 (global-set-key (kbd "C-c s f") 'helm-do-ag-this-file)
 (global-set-key (kbd "C-c s d") 'helm-do-ag)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-c i") 'helm-imenu)
 
 (global-set-key (kbd "C-$") 'my-insert-tilde)
 (global-set-key (kbd "C-t") 'my-insert-grave-accent)
@@ -69,6 +70,7 @@
 
 (global-set-key (kbd "<f12>") 'neotree-toggle)
 (global-set-key (kbd "<f1>") 'toggle-show-visual)
+(global-set-key (kbd "<f10>") 'centered-window-mode)
 
 (global-set-key (kbd "C-c f s") 'flyspell-check-previous-highlighted-word)
 

@@ -15,6 +15,8 @@
 
 (load.d "conf-conf")
 (load.d "lisp")
+(load.d "python-conf")
+(load.d "scala-conf")
 (load.d "erlang-conf")
 (load.d "clojure-conf")
 (load.d "elixir-conf")

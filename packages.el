@@ -39,6 +39,7 @@
         hideshow
         vimish-fold
         smart-mode-line
+        centered-window
 
         multiple-cursors
         indent-guide
@@ -52,7 +53,11 @@
         cider-eval-sexp-fu
         clj-refactor
 
-
+        ;; scala
+        ensime
+        scala-mode
+        sbt-mode
+        
         ;;erlang
         erlang
         ivy-erlang-complete
@@ -67,10 +72,13 @@
         web-mode
         tagedit
 
+        ;;js
+        js3-mode
+        flymake-jslint
+
         yaml-mode
         flymake
         flymake-cursor
-        flymake-jslint
         markdown-mode+
 
         json
@@ -92,7 +100,12 @@
 
         fountain-mode
         olivetti
-        imenu-list))
+        popup-imenu
+        imenu-list
+        eval-sexp-fu
+
+        elpy
+))
 
 (defun pkg:install-packages ()
   (package-initialize)
@@ -105,3 +118,6 @@
         (package-install p)))))
 
 (pkg:install-packages)
+
+;; some requires
+(require 'eval-sexp-fu)
