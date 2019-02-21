@@ -22,7 +22,6 @@
         expand-region
         abyss-theme
         intellij-theme
-        neotree
         rainbow-delimiters
         rainbow-identifiers
         highlight-symbol
@@ -35,6 +34,7 @@
         projectile
         helm
         helm-projectile
+        helm-swoop
         paredit
         hideshow
         vimish-fold
@@ -105,6 +105,14 @@
         eval-sexp-fu
 
         elpy
+
+        ;;navigation
+        neotree
+        dired-rainbow
+        dired-recent
+        dired-sidebar
+        dired-subtree
+        ace-jump-mode
 ))
 
 (defun pkg:install-packages ()

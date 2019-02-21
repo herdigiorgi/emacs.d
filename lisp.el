@@ -1,6 +1,6 @@
 ;; LISP ---------------------
 (defun lisp:shared-modes ()
-  (paredit-mode t)
+  (smartparens-global-strict-mode 1)
   (show-paren-mode 1)
   (projectile-mode 1)
   (hs-minor-mode 1)

@@ -5,7 +5,7 @@
 (defun my-interpunct () (interactive) (my-insert-after-point "·"))
 (defun my-back-slash () (interactive) (my-insert-after-point "\\"))
 
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-s") 'helm-swoop-without-pre-input)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c s f") 'helm-do-ag-this-file)
 (global-set-key (kbd "C-c s d") 'helm-do-ag)
@@ -28,6 +28,9 @@
 (global-set-key (kbd "C-c <C-left>")  'other-frame)
 (global-set-key (kbd "C-x SPC") 'just-one-space)
 (global-set-key (kbd "C-c v") 'highlight-symbol)
+(global-set-key (kbd "C-c j") 'ace-jump-char-mode)
+(global-set-key (kbd "C-j") 'ace-jump-char-mode)
+(global-set-key (kbd "M-j") 'ace-jump-mode-pop-mark)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-+") 'default-text-scale-increase)
 (global-set-key (kbd "C--") 'default-text-scale-decrease)
@@ -60,15 +63,15 @@
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 ;When you want to add multiple cursors not based on continuous
 ;lines, but based on keywords in the buffer, use:
-(global-set-key (kbd "C-M-w") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-M-q") 'mc/mark-previous-like-this)
+(global-set-key (kbd "M-RET") 'mc/mark-next-like-this)
+(global-set-key (kbd "<C-return>") 'mc/mark-next-like-this-word)
 (global-set-key (kbd "C-c C-a") 'mc/mark-all-like-this)
 
 (global-set-key (kbd "C-c p p") #'helm-projectile-switch-project)
 (global-set-key (kbd "C-c p f") #'helm-projectile-find-file)
 (global-set-key (kbd "C-x C-b") #'helm-mini)
 
-(global-set-key (kbd "<f12>") 'neotree-toggle)
+(global-set-key (kbd "<f12>") 'dired-sidebar-toggle-sidebar)
 (global-set-key (kbd "<f1>") 'toggle-show-visual)
 (global-set-key (kbd "<f10>") 'centered-window-mode)
 

@@ -27,3 +27,5 @@
 (load.d "html-conf")
 (load.d "markdown-conf")
 (load.d "screen-writing-conf")
+
+(load.d "external/dired+")
