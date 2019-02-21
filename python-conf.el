@@ -12,6 +12,10 @@
   (add-to-list 'python-shell-completion-native-disabled-interpreters
                "jupyter")
 
+  (defun python-debugger()
+    (interactive)
+    (realgud:pdb))
+
   (defun my-python-bindings ()
     (local-set-key (kbd "C-c TAB") #'company-complete)
     (local-set-key (kbd "C-c SPC") #'helm-company)
@@ -19,7 +23,8 @@
     (local-set-key (kbd "C-c r f") #'elpy-format-code)
     (local-set-key (kbd "C-c r r") #'elpy-refactor)
     (local-set-key (kbd "C-c r e") #'elpy-multiedit-python-symbol-at-point)
-    (local-unset-key (kbd "C-x C-c")))
+    (local-unset-key (kbd "C-x C-c"))
+    (define-key elpy-mode-map (kbd "<C-return>") nil))
 
   (defun my-python-set-indentation ()
     (setq indent-tabs-mode nil)

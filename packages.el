@@ -104,7 +104,9 @@
         imenu-list
         eval-sexp-fu
 
+        ;; python
         elpy
+        realgud
 
         ;;navigation
         neotree
