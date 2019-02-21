@@ -1,5 +1,5 @@
 ;; pip install --user jedi rope flake8 autopep8 jupyter
-(use-package python
+(use-package elpy
   :mode ("\\.py\\'" . python-mode)
 
   :init
@@ -13,8 +13,8 @@
                "jupyter")
 
   (defun my-python-bindings ()
-    (local-set-key (kbd "C-c TAB") #'auto-complete)
-    (local-set-key (kbd "C-c SPC") #'ac-complete-with-helm)
+    (local-set-key (kbd "C-c TAB") #'company-complete)
+    (local-set-key (kbd "C-c SPC") #'helm-company)
     (local-set-key (kbd "C-x C-e") #'elpy-shell-send-statement)
     (local-set-key (kbd "C-c r f") #'elpy-format-code)
     (local-set-key (kbd "C-c r r") #'elpy-refactor)
@@ -27,11 +27,20 @@
     (setq python-indent-guess-indent-offset-verbose nil)
     (setq tab-width 4))
 
+  (defun print-backends ()
+    (interactive)
+    (print company-backends))
+
+  (defun my-python-setup-completion()
+    (set (make-local-variable 'company-backends)
+         '((elpy-company-backend company-yasnippet))))
+
   (defun python-mode-conf-hook ()
     (my-python-set-indentation)
+    (my-python-setup-completion)
     (eval-sexp-fu-flash-mode 1)
     (rainbow-delimiters-mode 1)
     (smartparens-global-strict-mode 1)
     (my-python-bindings))
 
-  (add-hook 'python-mode-hook 'python-mode-conf-hook))
+  (add-hook 'elpy-mode-hook 'python-mode-conf-hook))
