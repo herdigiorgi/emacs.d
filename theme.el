@@ -13,7 +13,7 @@
 
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
-(set-default-font "IBM Plex Mono" nil t)
+(set-frame-font "IBM Plex Mono" nil t)
 ;(set-face-bold-p 'bold nil)
 
 (setq visible-bell 1)
