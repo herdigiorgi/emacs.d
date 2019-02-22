@@ -107,6 +107,7 @@
         ;; python
         elpy
         realgud
+        pipenv
 
         ;;navigation
         neotree
