@@ -13,12 +13,11 @@
 
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
-(set-frame-font "IBM Plex Mono" nil t)
-;(set-face-bold-p 'bold nil)
+(add-to-list 'default-frame-alist
+             '(font . "IBM Plex Mono-10"))
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)
-(set-face-attribute 'default nil :height 100 :weight 'regular)
 (setq ring-bell-function 'ignore)
 ;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-fixed-size nil)
@@ -32,11 +31,6 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-
-;(defun remove-all-bars-after-make-frame (f) (remove-all-bars))
-;(add-hook 'server-visit-hook 'remove-all-bars)
-;(add-hook 'after-make-frame-functions 'remove-all-bars-after-make-frame)
-;(remove-all-bars)
 
 ;; SCROLL
 (yascroll-bar-mode 1)
