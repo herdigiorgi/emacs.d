@@ -4,6 +4,7 @@
 
   :init
   (elpy-enable)
+  (require 'realgud)
 
   :config
   (setq python-shell-interpreter "jupyter"
@@ -23,6 +24,7 @@
     (local-set-key (kbd "C-c r f") #'elpy-format-code)
     (local-set-key (kbd "C-c r r") #'elpy-refactor)
     (local-set-key (kbd "C-c r e") #'elpy-multiedit-python-symbol-at-point)
+    (local-set-key (kbd "<return>") #'newline-and-indent)
     (local-unset-key (kbd "C-x C-c"))
     (define-key elpy-mode-map (kbd "<C-return>") nil))
 

@@ -108,6 +108,16 @@
         elpy
         realgud
         pipenv
+        virtualenv
+        auto-virtualenv
+
+        ;; rust
+        rust-mode
+        racer
+        rust-auto-use
+        cargo
+        flycheck-rust
+        flymake-rust
 
         ;;navigation
         neotree
