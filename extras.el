@@ -99,3 +99,6 @@
 
 ;; centered
 (setq cwm-centered-window-width 80)
+
+;; semantic
+(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)

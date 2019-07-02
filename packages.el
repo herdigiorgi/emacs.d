@@ -57,7 +57,9 @@
         ensime
         scala-mode
         sbt-mode
-        
+        ;; java
+        eclim
+
         ;;erlang
         erlang
         ivy-erlang-complete
@@ -75,6 +77,13 @@
         ;;js
         js3-mode
         flymake-jslint
+
+        ;; c++
+        ggtags
+        helm-gtags
+        cedet
+        ws-butler ; unobtrusive way to trim spaces from end of line
+        stickyfunc-enhance
 
         yaml-mode
         flymake
@@ -121,6 +130,7 @@
 
         ;;navigation
         neotree
+        sr-speedbar
         dired-rainbow
         dired-recent
         dired-sidebar

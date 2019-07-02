@@ -71,7 +71,7 @@
 (global-set-key (kbd "C-c p f") #'helm-projectile-find-file)
 (global-set-key (kbd "C-x C-b") #'helm-mini)
 
-(global-set-key (kbd "<f12>") 'dired-sidebar-toggle-sidebar)
+(global-set-key (kbd "<f12>") 'sr-speedbar-toggle)
 (global-set-key (kbd "<f1>") 'toggle-show-visual)
 (global-set-key (kbd "<f10>") 'centered-window-mode)
 

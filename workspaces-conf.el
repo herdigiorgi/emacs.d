@@ -79,3 +79,9 @@
     (set-buffer-modified-p nil)
     (setq buffer-read-only t))
   (beginning-of-buffer))
+
+(use-package sr-speedbar
+  :config
+  (setq speedbar-use-images nil)
+  (setq speedbar-show-unknown-files t)
+  (setq sr-speedbar-right-side nil))
