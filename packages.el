@@ -119,6 +119,8 @@
         pipenv
         virtualenv
         auto-virtualenv
+        pipenv
+        pyvenv
 
         ;; rust
         rust-mode

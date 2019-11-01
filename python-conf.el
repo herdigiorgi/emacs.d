@@ -5,6 +5,12 @@
   :init
   (elpy-enable)
   (require 'realgud)
+  (load "elpy")
+
+  (load "elpy-shell")
+  (load "elpy-profile")
+  (load "elpy-refactor")
+  (load "elpy-django")
 
   :config
   (setq python-shell-interpreter "jupyter"
@@ -12,6 +18,8 @@
         python-shell-prompt-detect-failure-warning nil)
   (add-to-list 'python-shell-completion-native-disabled-interpreters
                "jupyter")
+  (setq pipenv-with-flycheck nil)
+  (setq pipenv-with-projectile nil)
 
   (defun python-debugger()
     (interactive)
@@ -43,6 +51,8 @@
          '((elpy-company-backend company-yasnippet))))
 
   (defun python-mode-conf-hook ()
+    (pipenv-mode 1)
+    (flycheck-mode 1)
     (my-python-set-indentation)
     (my-python-setup-completion)
     (eval-sexp-fu-flash-mode 1)
