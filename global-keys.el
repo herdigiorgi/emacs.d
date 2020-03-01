@@ -37,6 +37,7 @@
 
 (global-set-key (kbd "C-c h a") #'origami-toggle-all-nodes)
 (global-set-key (kbd "C-c h b") #'origami-recursively-toggle-node)
+(global-set-key (kbd "C-c h t") #'origami-toggle-node)
 
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g m") 'smerge-keep-mine)

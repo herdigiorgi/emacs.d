@@ -1,6 +1,5 @@
 (package-initialize)
 (require 'cl)
-(server-start)
 (setq custom-file "~/.emacs-custom.el")
 (when (file-exists-p custom-file) (load custom-file))
 

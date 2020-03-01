@@ -13,8 +13,6 @@
 
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
-(add-to-list 'default-frame-alist
-             '(font . "IBM Plex Mono-10"))
 
 (setq visible-bell 1)
 (global-hl-line-mode 0)
@@ -23,6 +21,7 @@
 (setq neo-window-fixed-size nil)
 (setq neo-smart-open t)
 
+(setq fci-rule-column 80)
 (setq fci-rule-width 1)
 (setq fci-rule-color "#DDDDDD")
 
